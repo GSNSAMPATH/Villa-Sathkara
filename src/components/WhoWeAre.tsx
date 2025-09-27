@@ -53,7 +53,7 @@ export default function WhoWeAre() {
       <div className="grid md:grid-cols-2 gap-8 items-center mb-12 justify-between">
         {/* Left image */}
         <Image
-          src="https://res.cloudinary.com/diatamf9x/image/upload/v1756225075/g7_yqn0d2.webp" // replace with your image
+          src="https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp" // replace with your image
           alt="Who We Are"
           width={400}
           height={400}
