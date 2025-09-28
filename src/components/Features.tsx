@@ -84,7 +84,7 @@ export default function Features() {
 
       {/* Button */}
       <div className="mt-20 ">
-        <button className="bg-[#1B3A57] text-white px-6 py-1.5 w-full md:max-w-[200px] rounded-full hover:bg-[#153049]">
+        <button className="bg-[#1B3A57] text-white px-6 py-1.5 md:py-3 w-full md:md:w-[300px] rounded-full hover:bg-[#153049]">
           Check Availability →
         </button>
       </div>

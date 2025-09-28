@@ -57,18 +57,18 @@ export default function WhoWeAre() {
           alt="Who We Are"
           width={400}
           height={400}
-          className="rounded-2xl object-cover w-full h-full order-2 md:order-1"
+          className="rounded-2xl h-auto md:h-[400px] object-cover w-full order-2 md:order-1"
         />
         {/* Title */}
         <div className="space-y-4 order-1 md:order-2">
-        <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] leading-[100%] tracking-[0%] text-center md:text-left md:text-4xl  font-bold text-blue-900">
+        <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] leading-[100%] tracking-[0%] text-center md:text-left md:text-4xl font-bold text-blue-900">
           Who We Are
         </h2>
         <p className="font-[Poppins] font-normal text-[12px] md:text-[20px]  tracking-[0%] letter-spacing: 0px text-center md:text-justify text-gray-600 md:mt-8">
-          Villa Sathkara is more than just a place to stay — it’s a private villa in Tangalle designed for travelers who value style, comfort, and authentic experiences. Here you can unwind in luxury, reconnect with loved ones, and discover the very best of Southern Sri Lanka in one unforgettable escape. 
+          Villa Sathkara is a private villa in Tangalle offering style, comfort, and authentic Sri Lankan experiences. Unwind in luxury, reconnect with loved ones, and explore the best of the south coast. 
         </p>
         <p className="font-[Poppins] font-normal text-[12px] md:text-[20px]  tracking-[0%] letter-spacing: 0px text-center md:text-justify text-gray-600 md:mt-8">
-          Located in Bodhi Mawatha, Unakuruwa, Tangalle, Villa Sathkara combines modern amenities with traditional Sri Lankan hospitality. With caring staff, personalized service, and opportunities to explore beaches, culture, and wildlife, our villa is the perfect base for both adventure and relaxation. Whether you’re planning a family holiday, a couple’s retreat, or a group getaway, Villa Sathkara is your gateway to Sri Lanka’s south coast.
+          Located in Unakuruwa, Tangalle, Villa Sathkara blends modern comfort with authentic Sri Lankan hospitality. Our caring staff and thoughtful service ensure a relaxing stay. With beaches, culture, and wildlife nearby, it’s the perfect retreat for families, couples, and groups.
         </p>
         </div>
       </div>
@@ -76,13 +76,13 @@ export default function WhoWeAre() {
       {/* Features row */}
      <div>
   {/* Desktop & Tablet Grid */}
-  <div className="hidden md:grid md:grid-cols-3 gap-6">
+  <div className="hidden md:grid  md:grid-cols-3 gap-6">
     {features.map((item, index) => (
       <div
         key={index}
         className="mouse-pointer border-[1px] border-[#D8D8D8] bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition"
       >
-        <div className="mb-4">{item.icon}</div>
+        <div className="mb-4 ">{item.icon}</div>
         <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
         <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
       </div>
@@ -104,9 +104,9 @@ export default function WhoWeAre() {
             style={{ transform: `translateX(-${index * 100}%)` }}
           >
             {features.map((item, i) => (
-              <div key={i} className="min-w-full p-">
-                <div className="border-[1px] border-[#D8D8D8] bg-gray-50  p-3 mx-auto rounded-2xl shadow-sm h-full flex flex-col">
-                  <div className="mb-4">{item.icon}</div>
+              <div key={i} className="min-w-full text-center  p-">
+                <div className="border-[1px] border-[#D8D8D8] bg-gray-50  p-3 mx-auto rounded-2xl shadow-sm h-full flex flex-col justify-center items-center">
+                  <div className="mb-4 ">{item.icon}</div>
                   <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed mt-auto">{item.desc}</p>
                 </div>
