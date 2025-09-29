@@ -52,7 +52,7 @@ export default function Navbar() {
             </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className=" md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -88,7 +88,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md">
+        <div className="md:hidden absolute top-16 right-0 w-full bg-white shadow-md">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               href="/"
