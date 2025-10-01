@@ -44,26 +44,34 @@ export default function ExploreTangalle() {
       {/* Grid Layout */}
       <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-5">
         {/* Row 1 */}
-        <div className="md:col-span-2 relative rounded-2xl overflow-hidden bg-white h-[250px] md:h-[300px] ">
-          <Image
+        <div className="md:col-span-2 relative rounded-2xl overflow-hidden bg-white h-[250px] md:h-[300px] group">
+        <Image
             src={exploreSpots[0].img}
             alt="spot"
             width={800}
             height={500}
             className="h-[250px] md:h-[300px] w-full object-cover"
-          />
-          <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
+        />
+
+        {/* Overlay - hidden until hover */}
+        <div
+            className="absolute bottom-0 left-0 right-0 p-6 
+                    bg-gradient-to-t from-black/70 to-transparent
+                    opacity-0 group-hover:opacity-100 
+                    transition-opacity duration-300"
+        >
             <div className="flex items-center gap-2 text-white">
-              <FaMapMarkerAlt />
-              <h4 className="text-lg font-semibold">
+            <FaMapMarkerAlt />
+            <h4 className="text-lg font-semibold">
                 {exploreSpots[0].title}
-              </h4>
+            </h4>
             </div>
             <p className="text-sm text-gray-200 mt-2">
-              {exploreSpots[0].desc}
+            {exploreSpots[0].desc}
             </p>
-          </div>
         </div>
+        </div>
+
         <div className=" rounded-2xl overflow-hidden">
         <Image
             src={exploreSpots[1].img}

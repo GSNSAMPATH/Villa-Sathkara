@@ -77,7 +77,7 @@ export default function WhoWeAre() {
     }
 
   return (
-    <section className="bg-white text-white py-4 md:py-16 px-6 lg:px-20 text-center">
+    <section className="bg-white text-white mt-5 md:mt-20 py-4 md:py-16 px-1 lg:px-20 text-center">
       {/* Heading */}
       <div className="mb-12 bg-white">
         <div className="relative w-full flex justify-center mt-10">
@@ -111,7 +111,7 @@ export default function WhoWeAre() {
       </div>
 
        {/* ---------- Mobile carousel (replaces Flowbite mobile markup) ---------- */}
-      <div className="md:hidden relative mb-12">
+      <div className="md:hidden relative mb-12 ">
         {/* track wrapper (touch handlers) */}
         <div
           className="overflow-hidden rounded-2xl"
@@ -134,11 +134,22 @@ export default function WhoWeAre() {
               </div>
             ))}
           </div>
+                  {/* Line indicators (centered) */}
+        <div className="absolute mt-4  left-1/2 transform -translate-x-1/2 flex gap-2">
+          {features.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`h-1 w-8 rounded-full transition-all ${i === index ? "bg-[#1B3A57]" : "bg-gray-300"}`}
+            />
+          ))}
+        </div>
         </div>
       </div>
 
       {/* Big Image */}
-      <div className="relative w-full mt-10 md:mt-30 h-[25vh] md:h-[60vh] lg:h-[60vh] rounded-2xl overflow-hidden mb-10">
+      <div className="relative w-full mt-20 md:mt-30 h-[25vh] md:h-[60vh] lg:h-[60vh] rounded-2xl overflow-hidden mb-10">
         <Image
           src={villaImages[current]}
           alt="Villa"
@@ -158,7 +169,7 @@ export default function WhoWeAre() {
   </button>
 
  {/* Thumbnails */}
-<div className="flex gap-2 md:gap-4">
+<div className="flex gap-0 md:gap-4">
   {(isMobile ? villaImages.slice(0, 3) : villaImages).map((img, index) => (
     <div
       key={index}

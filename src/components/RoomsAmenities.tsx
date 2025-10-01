@@ -40,7 +40,13 @@ const specialAmenities = [
     icon: <FaUtensils className="text-xl text-white" />,
   },
   {
-    img: "https://res.cloudinary.com/diatamf9x/image/upload/v1758990066/3411e7633cc774b1ce0cba460fb8737462e18323_hvceix.jpg",
+    img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759311485/_DSC3564_hdkpev.webp",
+    title: "Living & Kitchen",
+    desc: "Fully equipped kitchen, flat-screen TV, washing machine, dining & lounge areas—ideal for families & groups.",
+    icon: <FaUtensils className="text-xl text-white" />,
+  },
+    {
+    img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759311825/_DSC3663_fmphv2.webp",
     title: "Living & Kitchen",
     desc: "Fully equipped kitchen, flat-screen TV, washing machine, dining & lounge areas—ideal for families & groups.",
     icon: <FaUtensils className="text-xl text-white" />,
@@ -48,10 +54,10 @@ const specialAmenities = [
 ];
 
 const features = [
-  { label: "Private Pool & Hot Tub", icon: <FaSwimmer className="text-lg" /> },
-    { label: "À la carte dining & BBQ", icon: <FaUtensils className="text-lg" /> },
-  { label: "Free WiFi", icon: <FaWifi className="text-lg" /> },
   { label: "Free Parking", icon: <FaParking className="text-lg" /> },
+  { label: "Private Pool & Hot Tub", icon: <FaSwimmer className="text-lg" /> },
+  { label: "dining & BBQ", icon: <FaUtensils className="text-lg" /> },
+  { label: "Free WiFi", icon: <FaWifi className="text-lg" /> },
 
 ];
 
@@ -91,7 +97,7 @@ export default function RoomsAmenities() {
       setCurrentIndex1((prev) =>
         prev + 1 >= specialAmenities.length ? 0 : prev + 1
       );
-    }, 3000);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
@@ -108,7 +114,7 @@ export default function RoomsAmenities() {
         </button>
         <button
           onClick={handleNext}
-          className="p-4 md:p-3 h-[30px] w-[30px] md:h-[60px] md:w-[60px] bg-white/20 hover:bg-white/30 rounded-full border-2 border-white flex items-center justify-center md:text-xl"
+          className="p-4 md:p-3 h-[30px] w-[30px] md:h-[60px] md:w-[60px] bg-white/20 hover:bg-white/30 rounded-full border-2 border-white flex items-center justify-center "
         >
           →
         </button>

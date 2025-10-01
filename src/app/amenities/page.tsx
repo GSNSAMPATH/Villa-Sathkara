@@ -1,5 +1,8 @@
 
+import VillaFeatures from '@/components/ammenities/ammenities';
+import Welcome from '@/components/ammenities/welcome';
 import Image from 'next/image'
+import Contact from '@/components/cuntact';
 export default function Amenities() {
     return (
         <section className="flex justify-center px-4 sm:px-6 md:px-8 min-h-screen w-full">
@@ -18,6 +21,9 @@ export default function Amenities() {
                         </div>
 
                         </section>
+                        <Welcome />
+                        <VillaFeatures/>
+                        <Contact/>
                     </div>
         
                 </section>

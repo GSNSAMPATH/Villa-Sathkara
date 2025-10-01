@@ -3,9 +3,19 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/amenities", label: "Amenities" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/contact", label: "Contact Us" },
+  ];
 
   return (
     <nav className="bg-white relative mt-1 py-2 fixed w-full z-50">
@@ -15,44 +25,44 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
-                src="https://res.cloudinary.com/diatamf9x/image/upload/v1758885559/Group_33681_imccts.png" 
+                src="https://res.cloudinary.com/diatamf9x/image/upload/v1758885559/Group_33681_imccts.png"
                 width={80}
                 height={100}
-                alt="Villa Sathkara" 
-                className="w-[90%] max-w-[50px] md:max-w-[150px] h-auto" />
+                alt="Villa Sathkara"
+                className="w-[90%] max-w-[50px] md:max-w-[150px] h-auto"
+              />
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <Link href="/" className="text-gray-700 hover:text-gray-900">
-              Home
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-gray-900">
-              About
-            </Link>
-            <Link href="/amenities" className="text-gray-700 hover:text-gray-900">
-              Amenities
-            </Link>
-             <Link href="/gallery" className="text-gray-700 hover:text-gray-900">
-              Gallery
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-gray-900">
-              Contact Us
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`${
+                  pathname === link.href
+                    ? "text-[#1B3A57] font-semibold border-b-2 border-[#1B3A57]"
+                    : "text-gray-700 hover:text-gray-900"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Book Now Button */}
+          <div className="hidden md:flex">
+            <Link
+              href="/contact"
+              className="bg-[var(--button-background)] text-white px-4 py-2 rounded-[20px] hover:bg-blue-800"
+            >
+              Book Now
             </Link>
           </div>
-          {/* Book Now Button */}
-            <div className="hidden md:flex">
-              <Link
-                href="/contact"
-                className="bg-[var(--button-background)] text-white px-4 py-2 rounded-[20px] hover:bg-blue-800 ; "
-              >
-                Book Now
-              </Link>
-            </div>
 
           {/* Mobile Menu Button */}
-          <div className=" md:hidden flex items-center">
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -90,41 +100,20 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden absolute top-16 right-0 w-full bg-white shadow-md">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              href="/"
-              className="block text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="block text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              href="/amenities"
-              className="block text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md"
-              onClick={() => setIsOpen(false)}
-            >
-             Amenities
-            </Link>
-            <Link
-                href="/gallery"
-                className="block text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md"
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block px-3 py-2 rounded-md ${
+                  pathname === link.href
+                    ? "text-blue-600 font-semibold bg-gray-100"
+                    : "text-gray-700 hover:text-gray-900"
+                }`}
                 onClick={() => setIsOpen(false)}
               >
-                Gallery
+                {link.label}
               </Link>
-            <Link
-              href="/contact"
-              className="block text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact Us
-            </Link>
+            ))}
           </div>
         </div>
       )}
