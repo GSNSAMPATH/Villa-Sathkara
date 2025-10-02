@@ -15,8 +15,8 @@ export default function Contact() {
                     />
 
                     <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 text-center md:px-24">
-                        <h1 className="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl font-bold text-white text-center mb-8 font-[Poppins]">Contact Us</h1>
-                        <p className="relative top-1/2 left-1/2 md:left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-bold text-white text-center px-24">Whether you’re planning your next holiday, have questions about our villa, or need help arranging transfers and activities, we’re always happy to assist. Reach out to us today and let us make your stay in Tangalle effortless and unforgettable.</p>
+                        <h1 className="relative font-[poppins] font-semibold text-[16px] sm:text-[20px] md:text-[24px] top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center mb-8 md:mb-16">Contact Us</h1>
+                        <p className="relative font-[poppins] font-semibold text-[10px] sm:text-[20px] md:text-[24px] top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-center md:px-24 px-4">Whether you’re planning your next holiday, have questions about our villa, or need help arranging transfers and activities, we’re always happy to assist. Reach out to us today and let us make your stay in Tangalle effortless and unforgettable.</p>
                     </div>
                 </section>
 
@@ -168,7 +168,7 @@ export default function Contact() {
             </section>
 
             <section className=" mt-12 py-12 w-full">
-                <div className="flex justify-center h-[90vh] max-w-[1320px] mx-auto">
+                <div className="flex justify-center h-[50vh] md:h-[90vh] max-w-[1320px] mx-auto">
                 <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0346312418564!2d-73.87072598459423!3d40.7135141793316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25f8ff6a2e8f9%3A0xc80b8f06e177fe62!2sForest%20Hills%2C%20Queens%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
                         width="100%"

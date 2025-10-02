@@ -69,9 +69,10 @@ export default function VillaFeatures() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 p-6 lg:px-20 bg-white w-full text-white">
+    <div className="flex flex-col md:flex-row gap-8 p-0 lg:px-20 bg-white w-full text-white">
       {/* Left Side - Accordion List */}
-      <div className="w-full md:w-1/2 space-y-6">
+      <div className="w-full md:w-1/2 space-y-6 p-4 md:p-0">
+      <div className="w-full">
         {features.map((f, i) => (
           <div key={i}>
             <button
@@ -104,9 +105,10 @@ export default function VillaFeatures() {
           </div>
         ))}
       </div>
+      </div>
 
       {/* Right Side - Image Slider */}
-      <div className="w-full md:w-1/2 bg-[#F0F0F0] py-10 rounded-3xl p-8 space-y-4 flex flex-col items-center">
+      <div className="w-full md:w-1/2 bg-[#F0F0F0] md:py-10 rounded-3xl md:p-8 space-y-4 flex flex-col items-center">
         {activeFeature !== null && (
           <>
             <div className="relative w-full">

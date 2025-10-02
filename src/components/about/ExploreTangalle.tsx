@@ -30,7 +30,7 @@ export default function ExploreTangalle() {
         const next = () => setIndex((i) => (i + 1) % exploreSpots.length);
 
   return (
-    <section className="relative w-full overflow-hidden py-16 mt-20">
+    <section className="relative w-full overflow-hidden py-1 md:py-12 mt-20">
       {/* Background Image */}
       <div className="relative w-full h-[300px] md:h-[600px] md:rounded-3xl">
         <Image

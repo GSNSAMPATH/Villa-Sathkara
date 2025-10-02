@@ -160,17 +160,31 @@ export default function ExploreTangalle() {
 
         {/* Row 3 */}
         <div className="grid grid-cols-2 gap-3">
-          <div className="relative rounded-lg overflow-hidden">
-            <Image
-              src={exploreSpots[3].img}
-              alt="Tangalle"
-              width={400}
-              height={300}
-              className="object-cover w-full h-[150px] rounded-lg"
-            />
-            <p className="absolute bottom-2 left-2 text-white text-xs flex items-center gap-1">
-              <span>📍</span> Hikkaduwa, Srilanka
-            </p>
+          <div className="relative rounded-lg overflow-hidden gap-3 flex flex-col">
+            <div className="relative rounded-lg overflow-hidden">
+              <Image
+                src={exploreSpots[3].img}
+                alt="Tangalle"
+                width={400}
+                height={300}
+                className="object-cover w-full h-[150px] rounded-lg"
+              />
+              <p className="absolute bottom-2 left-2 text-white text-xs flex items-center gap-1">
+                <span>📍</span> Hikkaduwa, Srilanka
+              </p>
+            </div>
+            <div className="relative rounded-lg overflow-hidden">
+              <Image
+                src={exploreSpots[4].img}
+                alt="Tangalle"
+                width={400}
+                height={300}
+                className="object-cover w-full h-[150px] rounded-lg"
+              />
+              <p className="absolute bottom-2 left-2 text-white text-xs flex items-center gap-1">
+                <span>📍</span> Hikkaduwa, Srilanka
+              </p>
+            </div>
           </div>
           <div className="relative rounded-lg overflow-hidden">
             <Image
@@ -185,23 +199,6 @@ export default function ExploreTangalle() {
             </p>
           </div>
         </div>
-
-        {/* Row 4 (wide image) */}
-        <div className="relative bottom-41 w-[170px] rounded-lg overflow-hidden">
-          <Image
-            src={exploreSpots[4].img}
-            alt="Tangalle"
-            width={600}
-            height={300}
-            className="object-cover w-auto h-[150px] rounded-lg"
-          />
-          <p className="absolute bottom-2 left-2 text-white text-xs flex items-center gap-1">
-            <span>📍</span> Hikkaduwa, Srilanka
-          </p>
-        </div>
-      
-    
-
       </div>
     </section>
   );

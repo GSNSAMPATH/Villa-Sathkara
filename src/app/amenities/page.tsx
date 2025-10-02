@@ -15,9 +15,9 @@ export default function Amenities() {
                             height={500}  // scale height proportionally
                             className="inset-0 w-full h-full object-cover" // responsive scaling
                         />
-                        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 text-center px-24">
-                            <h1 className="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl font-bold text-white text-center mb-8">Amenities</h1>
-                            <p className="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-bold text-white text-center px-24">Our villa is equipped with all the essentials—and more—so you can unwind, recharge, and experience true holiday bliss. From comfortable, well-appointed rooms to modern facilities and serene spaces, every detail is designed to make your stay as effortless and enjoyable as possible.</p>
+                        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 text-center md:px-24">
+                            <h1 className="relative font-[poppins] font-semibold text-[16px] sm:text-[20px] md:text-[24px] top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center mb-4 md:mb-16">Amenities</h1>
+                            <p className="relative font-[poppins] font-semibold text-[10px] sm:text-[20px] md:text-[24px] top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-center md:px-24 px-4">Our villa is equipped with all the essentials—and more—so you can unwind, recharge, and experience true holiday bliss. From comfortable, well-appointed rooms to modern facilities and serene spaces, every detail is designed to make your stay as effortless and enjoyable as possible.</p>
                         </div>
 
                         </section>
