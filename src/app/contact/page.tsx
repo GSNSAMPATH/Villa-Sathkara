@@ -54,7 +54,7 @@ export default function Contact() {
                     </div>
                 </section>
 
-                <section className="py-2 px-4 md:px-20  mt-[100px]">
+                <section className="py-2 px-0 md:px-20  mt-[100px]">
                     <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden shadow-lg">
                         {/* Left - Villa Info */}
                         <div className="bg-[#1B3A57] text-white p-10 flex flex-col justify-between relative order-2 md:order-1">
