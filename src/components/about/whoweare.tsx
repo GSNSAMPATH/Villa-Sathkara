@@ -8,8 +8,8 @@ import React from "react";
 
 const villaImages = [
   "https://res.cloudinary.com/diatamf9x/image/upload/v1759111542/251c7a09f8965b8a18d4ec50f869f0929cc16752_ths8ni.jpg",
-  "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
-  "https://res.cloudinary.com/diatamf9x/image/upload/v1759111542/251c7a09f8965b8a18d4ec50f869f0929cc16752_ths8ni.jpg",
+  "https://res.cloudinary.com/diatamf9x/image/upload/v1759480106/_DSC3516_th1grg.jpg",
+  "https://res.cloudinary.com/diatamf9x/image/upload/v1759480021/pool_f0jqhh.jpg",
   "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
 ];
 
@@ -77,9 +77,9 @@ export default function WhoWeAre() {
     }
 
   return (
-    <section className="bg-white text-white mt-5 md:mt-20 py-4 md:py-16 px-1 lg:px-20 text-center">
+    <section className="bg-white text-white mt-5 md:mt-20 py-4 md:py-16 px-4 lg:px-20 text-center">
       {/* Heading */}
-      <div className="mb-12 bg-white">
+      <div className="mb-12 px-2">
         <div className="relative w-full flex justify-center mt-10">
         <Image
             src="https://res.cloudinary.com/diatamf9x/image/upload/v1758885559/Group_33681_imccts.png"
@@ -89,7 +89,7 @@ export default function WhoWeAre() {
             className="w-[90%] max-w-[50px] md:max-w-[150px] h-auto" // responsive scaling
         />
         </div>
-            <div className="text-justify mt-4">
+            <div className="text-justify mt-4 ">
             <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] text-center font-bold mt-4 text-[var(--button-background)]">Who We Are ?</h2>
             <p className="font-[Poppins]  font-normal text-[12px] md:text-[20px] mt-6 text-[#000000]">Villa Sathkara was created for travelers who want more than just a place to stay. It’s a place to unwind in style, reconnect with loved ones, and experience the best of Southern Sri Lanka without compromise. </p>
             <p className="font-[Poppins] font-normal text-[12px] md:text-[20px] mt-2 text-[#000000]">Situated in Bodhi Mawatha, Unakuruwa, Tangalle, our villa embodies luxury and authenticity. We combine high-end amenities with local warmth — caring staff, thoughtful service, and opportunities to explore. Whether you’re here for adventure, relaxation, or a little of both, Villa Sathkara is your gateway.</p>
@@ -111,7 +111,7 @@ export default function WhoWeAre() {
       </div>
 
        {/* ---------- Mobile carousel (replaces Flowbite mobile markup) ---------- */}
-      <div className="md:hidden relative mb-12 ">
+      <div className="md:hidden relative mb-12 px-2 ">
         {/* track wrapper (touch handlers) */}
         <div
           className="overflow-hidden rounded-2xl"
@@ -128,7 +128,7 @@ export default function WhoWeAre() {
               <div key={i} className="min-w-full text-center  p-">
                 <div className="border-[1px] border-[#D8D8D8] bg-gray-50  p-3 mx-auto rounded-2xl shadow-sm h-full flex flex-col justify-center items-center">
                   <div className="mb-4 ">{item.icon}</div>
-                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-black">{item.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed mt-auto">{item.desc}</p>
                 </div>
               </div>

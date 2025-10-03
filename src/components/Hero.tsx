@@ -31,13 +31,13 @@ export default function Hero() {
         {/* Left side text */}
         <div className="lg:w-1/2 w-full md:space-y-4 space-y-2">
           <h1 className="lg:text-4xl text-md sm:text-2xl font-bold leading-tight">
-            Villa Sathkara – Your Luxury 4-Bedroom Beachfront <br /> Villa in Tangalle, Sri Lanka
+            Villa Sathkara  Your Luxury 4 Bedroom Beachfront <br /> Villa in Tangalle, Sri Lanka
           </h1>
           <p className="sm:text-lg text-sm text-gray-200">
             Refined comfort, complete privacy, and your beachfront <br /> villa escape in Tangalle.
           </p>
            <a
-              href="/booking"
+              href="/amenities"
               className="bg-white max-w-[130px] md:max-w-[200px] py-1  text-sm text-gray-900 md:px-12 text-center px-4 md:py-3 rounded-full font-medium hover:bg-gray-200 transition flex items-center gap-2"
             >
               Explore Now →

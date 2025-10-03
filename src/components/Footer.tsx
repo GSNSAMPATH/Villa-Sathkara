@@ -45,13 +45,13 @@ const Footer = () => {
         </div>
 
         {/* Center Logo */}
-        <div className="md:text-center absolute md:relative md:flex justify-center w-[60%] md:w-[70%]  md:mx-auto mt-55 md:mt-0 left-2/5 md:left-0 ">
+        <div className="md:text-center absolute md:relative md:flex justify-center w-[50%] md:w-[110%]  md:mx-auto mt-55 md:mt-20 left-2/5 md:left-0 ">
           <Image
-            src="https://res.cloudinary.com/diatamf9x/image/upload/v1758885559/Group_33681_imccts.png" // 🔹 place your logo inside public/
+            src="https://res.cloudinary.com/diatamf9x/image/upload/v1759466793/Layer_1_rd0euk.png" // 🔹 place your logo inside public/
             alt="Villa Logo"
-            width={360}
-            height={360}
-            className="opacity-20 "
+            width={460}
+            height={460}
+            className="opacity-50 "
           />
         </div>
 
@@ -92,7 +92,7 @@ const Footer = () => {
       <div className="border-t border-gray-600 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
         <p>Copyright © {new Date().getFullYear()} Villa Sathkara</p>
         <p className="mt-2 md:mt-0">
-          Built with <span className="text-white">❤️</span> in Sri Lanka
+          Built with <span className="text-white">Digital Escapes</span> in Sri Lanka
         </p>
       </div>
 
@@ -108,7 +108,7 @@ const Footer = () => {
               href="#"
               className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition"
             >
-              <i className="fab fa-twitter"></i>
+              <i className="fab fa-instagram"></i>
             </Link>
             <Link
               href="#"
@@ -120,7 +120,7 @@ const Footer = () => {
               href="#"
               className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition"
             >
-              <i className="fab fa-instagram"></i>
+              <i className="fab fa-x"></i>
             </Link>
             </div>
           </div>

@@ -19,13 +19,13 @@ const amenities = [
     icon: <MdBathroom className="text-xl text-white" />,
   },
   {
-    img: "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
+    img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759473969/pgjxjypi3oliflxxk99m_b4bqct.webp",
     title: "Extra Beds",
     desc: "Extra sleeping arrangements for families and groups.",
     icon: <FaBed className="text-xl text-white" />,
   },
   {
-    img: "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
+    img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759474841/_DSC3330_ldyg20.webp",
     title: "Modern Bathrooms",
     desc: "Elegant designs with hot water and modern fittings.",
     icon: <MdBathroom className="text-xl text-white" />,

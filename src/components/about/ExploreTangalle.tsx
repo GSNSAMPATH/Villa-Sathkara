@@ -30,18 +30,18 @@ export default function ExploreTangalle() {
         const next = () => setIndex((i) => (i + 1) % exploreSpots.length);
 
   return (
-    <section className="relative w-full overflow-hidden py-1 md:py-12 mt-20">
+    <section className="relative w-full overflow-hidden py-1 md:py-12 mt-20 rounded-2xl">
       {/* Background Image */}
-      <div className="relative w-full h-[300px] md:h-[600px] md:rounded-3xl">
+      <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl md:rounded-2xl">
         <Image
           src="https://res.cloudinary.com/diatamf9x/image/upload/v1758998018/58549a7d8cdf8ed31ddb79bbd46026e27db4a099_q1ydjn.jpg"
           alt="Tangalle"
           fill
-          className="object-cover rounded-sm md:rounded-3xl"
+          className="object-cover rounded-xl md:rounded-3xl"
         />
 
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40 rounded-md md:rounded-3xl" />
+        <div className="absolute inset-0 bg-black/40 rounded-2xl md:rounded-3xl" />
 
           {/* Line indicators (centered) */}
         <div className="absolute md:hidden mt-4  left-1/2 transform -translate-x-1/2 flex gap-2">

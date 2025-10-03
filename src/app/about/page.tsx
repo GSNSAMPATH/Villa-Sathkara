@@ -12,7 +12,7 @@ export default function About() {
   const images = [
     "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
     "https://res.cloudinary.com/diatamf9x/image/upload/v1759111542/251c7a09f8965b8a18d4ec50f869f0929cc16752_ths8ni.jpg",
-    "https://res.cloudinary.com/diatamf9x/image/upload/v1759111542/251c7a09f8965b8a18d4ec50f869f0929cc16752_ths8ni.jpg",
+    "https://res.cloudinary.com/diatamf9x/image/upload/v1759480117/DJI_20250831090508_0379_D-HDR-2_rqwl0k.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -60,7 +60,7 @@ export default function About() {
         <HomeByTheSea />
 
         {/* Hospitality Section */}
-        <section className="relative mt-10 w-full h-[30vh] sm:h-[60vh] lg:h-[60vh] overflow-hidden bg-gray-200 px-2 md:px-20 py-7 md:py-20 flex items-center content-center">
+        <section className="relative mt-10 w-full h-[30vh] sm:h-[60vh] lg:h-[60vh] overflow-hidden bg-gray-200 px-2 md:px-20 py-7 md:py-20 flex items-center content-center rounded-2xl">
           <div className="h-full w-1/2 md:max-w-2xl">
             <Image
               src="https://res.cloudinary.com/diatamf9x/image/upload/v1759224564/653d73049ffe2faaa2a0aa7346a72cb8998b7d63_m5xupb.jpg"

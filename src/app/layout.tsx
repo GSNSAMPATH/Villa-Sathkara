@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 
 const geistSans = Geist({
@@ -36,11 +37,13 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <Navbar />
+      <WhatsAppButton />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>
+
       <Footer />
     </html>
   );

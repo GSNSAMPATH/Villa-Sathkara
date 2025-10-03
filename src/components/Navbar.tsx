@@ -25,11 +25,11 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
-                src="https://res.cloudinary.com/diatamf9x/image/upload/v1758885559/Group_33681_imccts.png"
-                width={80}
-                height={100}
+                src="https://res.cloudinary.com/diatamf9x/image/upload/v1759466793/Layer_1_rd0euk.png"
+                width={160}
+                height={180}
                 alt="Villa Sathkara"
-                className="w-[90%] max-w-[50px] md:max-w-[150px] h-auto"
+                className="w-[150px] max-w-[75px] md:max-w-[150px] h-auto"
               />
             </Link>
           </div>

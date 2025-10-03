@@ -2,6 +2,7 @@
 import { FaBed, FaSwimmer, FaWifi, FaUtensils } from "react-icons/fa";
 import { MdKitchen } from "react-icons/md";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const features = [
   {
@@ -34,6 +35,8 @@ const features = [
 ];
 
 export default function Features() {
+   const router = useRouter();
+  
   return (
     <section className="py-6 md:py-25 text-center bg-white  sm:px-6 md:px-8 lg:px-30">
       {/* Logo + Title */}
@@ -84,7 +87,9 @@ export default function Features() {
 
       {/* Button */}
       <div className="mt-20 ">
-        <button className="bg-[#1B3A57] text-white px-6 py-1.5 md:py-3 w-full md:md:w-[300px] rounded-full hover:bg-[#153049]">
+        <button 
+        onClick={() => router.push("/amenities")}
+        className="bg-[#1B3A57] text-white px-6 py-2 md:py-3 w-full md:md:w-[300px] rounded-full hover:bg-blue-800">
           Check Availability →
         </button>
       </div>
