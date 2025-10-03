@@ -13,7 +13,12 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="https://res.cloudinary.com/diatamf9x/video/upload/v1758965642/Villa_Sathkara_tmkzib.webm" type="video/mp4" />
+
+        <source src="https://res.cloudinary.com/diatamf9x/video/upload/f_mp4,q_auto:best/Villa_Sathkara_tmkzib.mp4" type="video/mp4" />
+        
+      
+        <source src="https://res.cloudinary.com/diatamf9x/video/upload/v1758965642/Villa_Sathkara_tmkzib.webm" type="video/webm" />
+        
         Your browser does not support the video tag.
       </video>
 
