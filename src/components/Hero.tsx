@@ -11,7 +11,7 @@ export default function Hero() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover rounded-2xl"
       >
 
         <source src="https://res.cloudinary.com/diatamf9x/video/upload/f_mp4,q_auto:best/Villa_Sathkara_tmkzib.mp4" type="video/mp4" />
