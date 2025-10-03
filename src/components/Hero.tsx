@@ -43,7 +43,7 @@ export default function Hero() {
           </p>
            <a
               href="/amenities"
-              className="bg-white max-w-[180px] md:max-w-[200px] py-1  text-sm text-gray-900 md:px-12 text-center px-4 md:py-3 rounded-full font-medium hover:bg-gray-200 transition flex items-center gap-2"
+              className="bg-white max-w-[150px] md:max-w-[200px] py-1  text-sm text-gray-900 md:px-12 text-center px-4 md:py-3 rounded-full font-medium hover:bg-gray-200 transition flex items-center "
             >
               Explore Now →
             </a>
