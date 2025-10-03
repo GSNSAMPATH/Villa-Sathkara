@@ -108,13 +108,13 @@ export default function RoomsAmenities() {
       <div className="absolute sm:top-150  md:top-28 top-110 flex md:gap-4 z-10 items-center  px-4 justify-between md:justify-end w-full md:right-30 right-0 ">
         <button
           onClick={handlePrev}
-          className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-white  items-center justify-center flex md:text-[30px] "
+          className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-white  items-center justify-center flex md:text-[30px] text-[20px]"
         >
           ←
         </button>
         <button
           onClick={handleNext}
-          className="p-4 md:p-3 h-[30px] w-[30px] md:h-[60px] md:w-[60px] bg-white/20 hover:bg-white/30 rounded-full border-2 border-white flex items-center justify-center md:text-[30px]"
+          className="p-4 md:p-3 h-[30px] w-[30px] md:h-[60px] md:w-[60px] bg-white/20 hover:bg-white/30 rounded-full border-2 border-white flex items-center justify-center md:text-[30px] text-[20px]"
         >
           →
         </button>
