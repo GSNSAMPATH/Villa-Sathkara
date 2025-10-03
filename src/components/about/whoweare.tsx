@@ -169,7 +169,7 @@ export default function WhoWeAre() {
   </button>
 
  {/* Thumbnails */}
-<div className="flex gap-0 md:gap-4 w-full overflow-x-scroll md:overflow-x-hidden">
+<div className="flex gap-1 md:gap-4 w-full overflow-x-scroll md:overflow-x-hidden">
   {(isMobile ? villaImages.slice(0, 3) : villaImages).map((img, index) => (
     <div
       key={index}

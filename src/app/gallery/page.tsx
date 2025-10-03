@@ -310,7 +310,7 @@ export default function Gallery() {
                                         </div>
                                         <div className="relative rounded-lg overflow-hidden">
                                           <Image
-                                            src={galleryImages[0].img}
+                                            src={galleryImages[10].img}
                                             alt="Tangalle"
                                             width={400}
                                             height={300}
@@ -321,7 +321,7 @@ export default function Gallery() {
                                       </div>
                                       <div className="relative rounded-lg overflow-hidden">
                                         <Image
-                                          src={galleryImages[5].img}
+                                          src={galleryImages[11].img}
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
