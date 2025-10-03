@@ -67,7 +67,7 @@ export default function ExploreTangalle() {
               and safaris, every day brings a new adventure.
             </p>
             <button className="hidden md:flex w-fit px-6 py-3 bg-white text-black font-medium rounded-full flex items-center gap-2 hover:bg-gray-200 transition">
-              Explore Now →
+              Explore Now 
             </button>
           </div>
 
@@ -76,7 +76,7 @@ export default function ExploreTangalle() {
             <FaMapMarkerAlt className="text-white text-[12px] md:text-xl md:mt-1 mt-[3] mr-1" />
             <div>
               <h4 className="font-[Poppins] md:text-[20px] text-[12px] font-semibold">{exploreSpots[0].title}</h4>
-              <p className="font-[Poppins] sm:w-1/2 lg:w-full md:text-[16px] text-[8px] text-white/80 mt-1">{exploreSpots[0].desc}</p>
+              <p className="font-[Poppins] sm:w-1/2 lg:w-4/8 xl:w-5/6 2xl:w-full md:text-[16px] text-[8px] text-white/80 mt-1">{exploreSpots[0].desc}</p>
             </div>
           </div>
         </div>

@@ -54,10 +54,10 @@ const specialAmenities = [
 ];
 
 const features = [
-  { label: "Free Parking", icon: <FaParking className="text-lg" /> },
-  { label: "Private Pool & Hot Tub", icon: <FaSwimmer className="text-lg" /> },
-  { label: "dining & BBQ", icon: <FaUtensils className="text-lg" /> },
-  { label: "Free WiFi", icon: <FaWifi className="text-lg" /> },
+  { label: "Free Parking", icon: <FaParking className="text-[10px] md:text-[20px]" /> },
+  { label: "Private Pool & Hot Tub", icon: <FaSwimmer className="text-[10px] md:text-[20px]" /> },
+  { label: "dining & BBQ", icon: <FaUtensils className="text-[10px] md:text-[20px]" /> },
+  { label: "Free WiFi", icon: <FaWifi className="text-[10px] md:text-[20px]" /> },
 
 ];
 
@@ -108,13 +108,13 @@ export default function RoomsAmenities() {
       <div className="absolute sm:top-150  md:top-28 top-110 flex md:gap-4 z-10 items-center  px-4 justify-between md:justify-end w-full md:right-30 right-0 ">
         <button
           onClick={handlePrev}
-          className="p-4 md:p-3 h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-white flex items-center justify-center md:text-xl"
+          className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-white  items-center justify-center flex md:text-[30px] "
         >
           ←
         </button>
         <button
           onClick={handleNext}
-          className="p-4 md:p-3 h-[30px] w-[30px] md:h-[60px] md:w-[60px] bg-white/20 hover:bg-white/30 rounded-full border-2 border-white flex items-center justify-center "
+          className="p-4 md:p-3 h-[30px] w-[30px] md:h-[60px] md:w-[60px] bg-white/20 hover:bg-white/30 rounded-full border-2 border-white flex items-center justify-center md:text-[30px]"
         >
           →
         </button>
@@ -152,7 +152,7 @@ export default function RoomsAmenities() {
 
                   </div>
                     <h4 className="text-lg text-center text-white font-[Poppins] font-semibold text-[12px] md:text-[20px] font-bold md:text-left">{item.title}
-                    <p className="text-gray-200 font-[Poppins] font-normal text-[12px] mt-2 md:text-[16px] text-center max-w-[200px] md:max-w-full">{item.desc}</p>
+                    <p className="text-gray-200 font-[Poppins] font-normal text-[12px] mt-2 md:text-[16px] text-center md:text-left max-w-[200px] md:max-w-full">{item.desc}</p>
                 </h4>
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function RoomsAmenities() {
       {/* Features row */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:bg-[#274766] md:p-4 rounded-xl mt-10 px-4">
         {features.map((f, i) => (
-          <div key={i} className="flex items-center gap-6 text-white">
+          <div key={i} className="flex items-center gap-6 text-white text-[10px] md:text-[20px]">
             {f.icon}
             <span className="font-[Poppins] font-semibold text-[10px] md:text-[20px]">{f.label}</span>
           </div>
@@ -198,7 +198,7 @@ export default function RoomsAmenities() {
       {/* CTA */}
       <div className="flex justify-center mt-10">
         <button className="bg-white text-[#1B3A57] md:px-6 md:py-3 px-4 py-1 w-full md:md:w-[300px]  rounded-full font-semibold hover:bg-gray-200 transition">
-          View Rooms & Rates →
+          View Rooms & Rates 
         </button>
       </div>
     </section>

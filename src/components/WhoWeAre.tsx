@@ -57,7 +57,7 @@ export default function WhoWeAre() {
           alt="Who We Are"
           width={400}
           height={400}
-          className="rounded-2xl h-auto md:h-[400px] object-cover w-full order-2 md:order-1"
+          className="rounded-2xl h-full  object-cover w-full order-2 md:order-1"
         />
         {/* Title */}
         <div className="space-y-4 order-1 md:order-2">
@@ -83,8 +83,8 @@ export default function WhoWeAre() {
         className="mouse-pointer border-[1px] border-[#D8D8D8] bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition"
       >
         <div className="mb-4 ">{item.icon}</div>
-        <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-        <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+        <h3 className="text-lg font-[Poppins] md:text-[20px] font-semibold mb-2">{item.title}</h3>
+        <p className="text-gray-600 font-[Poppins] text-[16px] leading-relaxed">{item.desc}</p>
       </div>
     ))}
   </div>

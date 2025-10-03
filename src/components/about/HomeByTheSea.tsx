@@ -38,7 +38,7 @@ export default function HomeByTheSea() {
         <h2 className="font-[Poppins] font-semibold md:text-[36px] text-[16px] leading-[100%] tracking-[0%] text-[#1B3A57] text-center sm:text-left">
           A Home by the Sea
         </h2>
-        <p className="font-[Poppins] font-normal text-[12px] md:text-[20px]  tracking-[0%] letter-spacing: 0px  text-gray-600 mt-12 mb-6 text-center sm:text-left">
+        <p className="font-[Poppins] font-normal text-[12px] md:text-[20px]  tracking-[0%] text-gray-600 mt-12 mb-6 text-center sm:text-left">
           Our villa features four spacious double bedrooms,
           each with air conditioning and ceiling fans, two fully equipped kitchens,
           and a refreshing private swimming pool. With large terraces, free WiFi, and breakfast available on request,

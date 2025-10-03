@@ -13,7 +13,7 @@ export default function Cuntact() {
             <div className="flex justify-center w-full">
                 <button
                     onClick={() => router.push("/contact")}
-                    className="btn btn-primary btn-wide bg-[#1B3A57] md:px-6 md:py-3 py-2 w-full md:w-[300px] rounded-3xl hover:bg-blue-800 text-white">Contact Us</button>
+                    className="btn btn-primary btn-wide bg-[#1B3A57] md:px-6 md:py-3 py-2 w-full md:w-[300px] rounded-3xl hover:bg-blue-800 text-white font-semibold">Contact Us</button>
             </div>
         </section>
     )

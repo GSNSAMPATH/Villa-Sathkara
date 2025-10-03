@@ -7,6 +7,7 @@ import Cuntact from "@/components/cuntact";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+
 export default function About() {
   // Example images
   const images = [
@@ -74,7 +75,7 @@ export default function About() {
             <h1 className="ml-2 text-center md:text-left md:ml-10 font-[Poppins] md:text-[36px] text-[18px]">
               Hospitality with a Local Touch
             </h1>
-            <p className="ml-2 text-center md:text-left md:ml-10 font-[Poppins] text-[10px] md:text-[20px]">
+            <p className="ml-2 text-center md:text-left md:ml-10 font-[Poppins] text-[10px] md:text-[20px] font-normal ">
               Our friendly, English-speaking manager Dulash is always available
               to assist you. Whether it’s organizing an airport transfer,
               arranging a safari, or recommending the best local restaurants,

@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-start">
         {/* Left Section */}
         <div>
-          <h2 className="text-xl font-semibold text-blue-400">Villa Sathkara</h2>
-          <p className="mt-4 text-sm leading-6 text-gray-200">
+          <h2 className="text-xl font-semibold text-white">Villa Sathkara</h2>
+          <p className="mt-4  leading-6 text-gray-200">
             Bodhi Mawatha,<br />
             Unakuruwa,<br />
             Tangalle,<br />
@@ -27,7 +27,7 @@ const Footer = () => {
               href="#"
               className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition"
             >
-              <i className="fab fa-twitter"></i>
+              <i className="fab fa-instagram"></i>
             </Link>
             <Link
               href="#"
@@ -39,7 +39,7 @@ const Footer = () => {
               href="#"
               className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition"
             >
-              <i className="fab fa-instagram"></i>
+              <i className="fab fa-x"></i>
             </Link>
           </div>
         </div>

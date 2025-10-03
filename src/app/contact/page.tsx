@@ -49,8 +49,8 @@ export default function Contact() {
                     />
 
                     <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 text-center md:px-24">
-                        <h1 className="relative font-[poppins] font-semibold text-[16px] sm:text-[20px] md:text-[24px] top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center mb-8 md:mb-16">Contact Us</h1>
-                        <p className="relative font-[poppins] font-semibold text-[10px] sm:text-[20px] md:text-[24px] top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-center md:px-24 px-4">Whether you’re planning your next holiday, have questions about our villa, or need help arranging transfers and activities, we’re always happy to assist. Reach out to us today and let us make your stay in Tangalle effortless and unforgettable.</p>
+                        <h1 className="relative font-[poppins] font-semibold text-[16px] sm:text-[24px] md:text-[30px] top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center mb-8 md:mb-16">Contact Us</h1>
+                        <p className="relative font-[poppins] font-semibold text-[10px] sm:text-[16px] md:text-[20px] top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-center md:px-24 px-4">Whether you’re planning your next holiday, have questions about our villa, or need help arranging transfers and activities, we’re always happy to assist. Reach out to us today and let us make your stay in Tangalle effortless and unforgettable.</p>
                     </div>
                 </section>
 
@@ -170,7 +170,7 @@ export default function Contact() {
 
                             {/* Phone */}
                             <div className="relative">
-                                <FaPhone className="absolute top-3 left-0 text-gray-500" />
+                                <FaPhone className="absolute top-3 left-0 rotate-90 text-gray-500" />
                                 <input
                                 name="phone"
                                 type="tel"
@@ -195,15 +195,15 @@ export default function Contact() {
                             </div>
 
                             {/* Message */}
-                            <div className="relative">
-                                <FaRegCommentDots className="absolute top-3 left-2 text-gray-500" />
+                            <div className="relative ">
+                                <FaRegCommentDots className="absolute top-3 left-1 text-gray-500 " />
                                 <textarea
                                 name="message"
                                 placeholder="Type your message here"
                                 rows={4}
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="w-full pl-6 border border-gray-300 focus:outline-none focus:border-[#0D3559] py-2 rounded-md"
+                                className="w-full pl-6 border border-gray-300 focus:outline-none focus:border-[#0D3559] py-2 rounded-md "
                                 ></textarea>
                             </div>
 

@@ -63,7 +63,7 @@ export default function Features() {
         {features.slice(0, 3).map((feature, index) => (
           <div
             key={index}
-            className="mouse-pointer border-[1px] border-[#D8D8D8] rounded-md md:rounded-2xl md:p-6 p-2 flex flex-col items-center justify-between min-h-[20px] md:min-h-[220px]"
+            className="mouse-pointer border-[1px] border-[#D8D8D8] rounded-md md:rounded-2xl md:p-6 p-2 flex flex-col items-center  min-h-[20px] md:min-h-[220px]"
           >
             {feature.icon}
             <h3 className="font-[poppins] font-medium text-[10px] align-middle md:text-[20px]">{feature.title}</h3>
@@ -76,7 +76,7 @@ export default function Features() {
         {features.slice(3).map((feature, index) => (
           <div
             key={index}
-            className="mouse-pointer border-[1px] border-[#D8D8D8] rounded-md md:rounded-2xl md:p-6 p-2 flex flex-col items-center justify-between min-h-[20px] md:min-h-[220px]"
+            className="mouse-pointer border-[1px] border-[#D8D8D8] rounded-md md:rounded-2xl md:p-6 p-2 flex flex-col items-center  min-h-[20px] md:min-h-[220px]"
           >
             {feature.icon}
             <h3 className="font-[poppins] font-medium text-[10px] align-middle md:text-[20px]">{feature.title}</h3>
@@ -89,8 +89,8 @@ export default function Features() {
       <div className="mt-20 ">
         <button 
         onClick={() => router.push("/amenities")}
-        className="bg-[#1B3A57] text-white px-6 py-2 md:py-3 w-full md:md:w-[300px] rounded-full hover:bg-blue-800">
-          Check Availability →
+        className="bg-[#1B3A57] text-white px-6 py-2 md:py-3 w-full md:md:w-[300px] rounded-full font-semibold">
+          Check Availability 
         </button>
       </div>
     </section>

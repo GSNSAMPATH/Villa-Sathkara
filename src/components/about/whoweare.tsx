@@ -159,30 +159,32 @@ export default function WhoWeAre() {
       </div>
 
 {/* Carousel Controls + Thumbnails */}
-<div className="flex items-center justify-center gap-4 md:gap-6">
+<div className="flex items-center justify-center gap-4 md:gap-10">
   {/* Prev Button */}
   <button
     onClick={prevSlide}
-    className="p-2 md:p-3 bg-white rounded-full text-black shadow hover:scale-105"
+    className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-black  items-center justify-center flex md:text-[30px] text-black shadow hover:scale-105"
   >
-    <ChevronLeft />
+    ←
   </button>
 
  {/* Thumbnails */}
-<div className="flex gap-0 md:gap-4">
+<div className="flex gap-0 md:gap-4 w-full overflow-x-scroll md:overflow-x-hidden">
   {(isMobile ? villaImages.slice(0, 3) : villaImages).map((img, index) => (
     <div
       key={index}
       onClick={() => setCurrent(index)}
-      className={`relative w-20 h-14 md:w-32 md:h-20 rounded-lg overflow-hidden cursor-pointer border-2 ${
+
+      className={`w-full h-auto sm:h-[90px] md:h-[100px] xl:h-[160px] cursor-pointer rounded-2xl border-2 ${
         current === index ? "border-blue-400" : "border-transparent"
       }`}
     >
       <Image
         src={img}
         alt={`Villa ${index}`}
-        fill
-        className="object-cover"
+        width={800}
+        height={700}
+        className="object-cover w-full h-full rounded-2xl"
       />
     </div>
   ))}
@@ -193,15 +195,15 @@ export default function WhoWeAre() {
   {/* Next Button */}
   <button
     onClick={nextSlide}
-    className="p-2 md:p-3 bg-white rounded-full text-black shadow hover:scale-105"
+    className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-black  items-center justify-center flex md:text-[30px] text-black shadow hover:scale-105"
   >
-    <ChevronRight />
+    →
   </button>
 </div>
 
       {/* Book Now */}
       <div className="mt-10">
-        <button className="md:px-6 md:py-3 py-2 w-full md:w-[300px] rounded-full bg-[#1B3A57] hover:bg-blue-700 text-white font-medium">
+        <button className="md:px-6 md:py-3 py-2 w-full md:w-[300px] rounded-full bg-[#1B3A57]  text-white font-medium">
           Book Now
         </button>
       </div>
