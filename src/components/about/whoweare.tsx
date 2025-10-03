@@ -163,7 +163,7 @@ export default function WhoWeAre() {
   {/* Prev Button */}
   <button
     onClick={prevSlide}
-    className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-black  items-center justify-center flex md:text-[30px] text-black shadow hover:scale-105"
+    className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-black  items-center justify-center flex md:text-[30px] text-[20px] text-black shadow hover:scale-105"
   >
     ←
   </button>
@@ -195,7 +195,7 @@ export default function WhoWeAre() {
   {/* Next Button */}
   <button
     onClick={nextSlide}
-    className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-black  items-center justify-center flex md:text-[30px] text-black shadow hover:scale-105"
+    className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-black  items-center justify-center flex md:text-[30px] text-[20px] text-black shadow hover:scale-105"
   >
     →
   </button>
