@@ -32,7 +32,7 @@ export default function Hero() {
 
 
       {/* Content */}
-      <div className="relative z-10 flex top-10 sm:top-[-80px] md:top-[-90px] sm:bottom-20 justify-center flex-col md:flex-row sm:pt-[340px] sm:place-items-end md:justify-between h-full px-4 sm:px-5 lg:px-30 text-white">
+      <div className="relative z-10 flex top-10 sm:top-[-80px] md:top-[-90px] sm:bottom-20 justify-center flex-col md:flex-row sm:pt-[340px] sm:place-items-end md:justify-between h-full px-4 sm:px-5 lg:px-30 text-white rounded-2xl">
         {/* Left side text */}
         <div className="lg:w-1/2 w-full md:space-y-4 space-y-2 ">
           <h1 className="lg:text-4xl text-md sm:text-2xl font-bold leading-tight">
