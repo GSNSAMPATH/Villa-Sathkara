@@ -39,10 +39,10 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="md:py-12 py-6 mt-[-170] px-6 max-w-screen lg:px-30 bg-gray-50 ">
+    <section className="md:py-12 py-6 mt-[-90] px-6 max-w-screen lg:px-30 bg-gray-50 ">
       {/* Heading */}
       <div className="text-center mt-4 mb-8">
-        <h2 className="font-[Poppins] font-semibold md:text-[36px] text-[16px] leading-[100%] tracking-[0%] text-gray-900">
+        <h2 className="font-[Poppins] font-semibold md:text-[36px] text-[16px] leading-[100%] tracking-[0%] text-gray-800">
           What Our Guests Say
         </h2>
       </div>
@@ -54,9 +54,9 @@ export default function Testimonials() {
             key={index}
             className="bg-white rounded-lg shadow-sm p-8 flex flex-col gap-4 hover:shadow-md transition"
           >
-            <FaQuoteLeft className="text-3xl text-[#0D3559]" />
+            <FaQuoteLeft className="text-3xl text-gray-800" />
             <p className="text-gray-700 leading-relaxed">{item.text}</p>
-            <p className="font-semibold text-[#0D3559]">{item.author}</p>
+            <p className="font-semibold text-gray-800">{item.author}</p>
           </div>
         ))}
       </div>

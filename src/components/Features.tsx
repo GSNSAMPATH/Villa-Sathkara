@@ -6,28 +6,28 @@ import { useRouter } from "next/navigation";
 
 const features = [
   {
-    icon: <FaBed className="mx-auto  sm:text-3xl text-[#1B3A57] sm:mb-4" />,
+    icon: <FaBed className="mx-auto  sm:text-3xl text-gray-800 sm:mb-4" />,
     title: "Four En-Suite Bedrooms",
     description: "each designed with comfort and elegance in mind",
   },
   {
-    icon: <MdKitchen className="mx-auto sm:text-3xl text-[#1B3A57] sm:mb-4" />,
+    icon: <MdKitchen className="mx-auto sm:text-3xl text-gray-800 sm:mb-4" />,
     title: "Modern Kitchen & A/C",
     description:
       "A fully equipped modern kitchen, flat-screen TV and a washing machine.",
   },
   {
-    icon: <FaSwimmer className="mx-auto sm:text-3xl text-[#1B3A57] sm:mb-4" />,
+    icon: <FaSwimmer className="mx-auto sm:text-3xl text-gray-800 sm:mb-4" />,
     title: "Private Pool & Hot Tub",
     description: "For relaxing evenings under the sky.",
   },
   {
-    icon: <FaWifi className="mx-auto sm:text-3xl text-[#1B3A57] sm:mb-4" />,
+    icon: <FaWifi className="mx-auto sm:text-3xl text-gray-800 sm:mb-4" />,
     title: "Free WiFi & Parking",
     description: "Free WiFi, Private parking and Beautiful garden and sea views.",
   },
   {
-    icon: <FaUtensils className="mx-auto sm:text-3xl text-[#1B3A57] sm:mb-4" />,
+    icon: <FaUtensils className="mx-auto sm:text-3xl text-gray-800 sm:mb-4" />,
     title: "On-site Dining & BBQ",
     description:
       "À la carte dining with family-friendly restaurant & BBQ facilities.",
@@ -38,20 +38,20 @@ export default function Features() {
    const router = useRouter();
   
   return (
-    <section className="py-6 md:py-25 text-center bg-white  sm:px-6 md:px-8 lg:px-30">
+    <section className="md:py-22 mt-10 md:mt-10 md:py-2 text-center bg-white  sm:px-6 md:px-8 lg:px-30">
       {/* Logo + Title */}
-      <div className="mb-12 space-y-4">
+      <div className="mb-12 space-y-8">
     <div className="relative w-full flex justify-center mt-10">
       <Image
-        src="https://res.cloudinary.com/diatamf9x/image/upload/v1758885559/Group_33681_imccts.png"
+        src="https://res.cloudinary.com/diatamf9x/image/upload/v1759466793/Layer_1_rd0euk.png"
         alt="Villa Sathkara"
         width={600}   // base width for Next.js optimization
         height={500}  // scale height proportionally
-        className="w-[90%] max-w-[50px] md:max-w-[150px] h-auto" // responsive scaling
+        className="w-[90%] max-w-[150px] md:max-w-[350px] h-auto" // responsive scaling
       />
     </div>
-        <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] leading-[100%] tracking-[0%] text-center align-middle text-lg sm:text-2xl font-semibold text-[var(--button-background)]">
-          Welcome to Villa Sathkara
+        <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] leading-[100%] tracking-[0%] text-center align-middle text-lg sm:text-2xl font-semibold text-gray-800">
+          Paradise in Unakuruwa
         </h2>
         <p className="font-[Poppins] font-normal text-[12px] md:text-[20px]  tracking-[0%] letter-spacing: 0px text-center align-middle text-sm sm:text-lg max-w-[993px] mx-auto font-medium text-[#000000]">
           Welcome to Villa Sathkara, a private four-bedroom villa in Tangalle just steps from Unakuruwa Beach. Blending refined comfort, privacy, and island charm, our villa is the perfect escape for families, friends, or couples seeking relaxation by the sea.
@@ -89,7 +89,7 @@ export default function Features() {
       <div className="mt-20 ">
         <button 
         onClick={() => router.push("/amenities")}
-        className="bg-[#1B3A57] text-white px-6 py-2 md:py-3 w-full md:md:w-[300px] rounded-full font-semibold">
+        className="bg-gray-800 - text-white px-6 py-2 md:py-3 w-full md:md:w-[300px] rounded-full font-semibold">
           Check Availability 
         </button>
       </div>

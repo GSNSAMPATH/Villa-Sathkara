@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaBed, FaSwimmer, FaWifi, FaUtensils, FaParking, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { MdBathroom } from "react-icons/md";
-import { useRouter } from "next/navigation";
-
+import { FaA } from "react-icons/fa6";
+import router from "next/router";
 
 const amenities = [
   {
@@ -64,8 +64,6 @@ const features = [
 ];
 
 export default function RoomsAmenities() {
-  const router = useRouter();
-
   const [currentIndex, setCurrentIndex] = useState(0); // amenities carousel
   const [currentIndex1, setCurrentIndex1] = useState(0); // special amenities carousel
   const [itemsPerView, setItemsPerView] = useState(1);
@@ -106,7 +104,7 @@ export default function RoomsAmenities() {
   }, []);
 
   return (
-    <section className="bg-[#1B3A57] w-full mx-auto text-white py-6 md:py-16 px-4 lg:px-30 md:rounded-3xl rounded-xl relative">
+    <section className="bg-gray-800 w-full mx-auto text-white py-6 md:py-16 px-4 lg:px-30 md:rounded-3xl rounded-xl relative mt-20">
 
       {/* Controls */}
       <div className="absolute sm:top-150  md:top-28 top-110 flex md:gap-4 z-10 items-center  px-4 justify-between md:justify-end w-full md:right-30 right-0 ">
@@ -191,7 +189,7 @@ export default function RoomsAmenities() {
       </div>
 
       {/* Features row */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:bg-[#274766] md:p-4 rounded-xl mt-10 px-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:bg-white/20 md:p-4 rounded-xl mt-10 px-4">
         {features.map((f, i) => (
           <div key={i} className="flex items-center gap-6 text-white text-[10px] md:text-[20px]">
             {f.icon}
@@ -203,7 +201,7 @@ export default function RoomsAmenities() {
       {/* CTA */}
       <div className="flex justify-center mt-10">
         <button
-        onClick={() => router.push("/amenities")}
+        onClick={() => router.push("/amenities")} 
         className="bg-white text-[#1B3A57] md:px-6 md:py-3 px-4 py-1 w-full md:md:w-[300px]  rounded-full font-semibold hover:bg-gray-200 transition">
           View Rooms & Rates 
         </button>

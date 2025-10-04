@@ -28,7 +28,7 @@ const exploreSpots = [
   {
     img: "https://res.cloudinary.com/diatamf9x/image/upload/v1758998023/d6e0956be44732233490db31c3acda63e5c970f9_1_jnvzkh.jpg",
     title: "Other Beaches & Local Villages",
-    desc: "Explore nearby coastal spots, hidden coves, small fishing villages, fresh seafood, markets."
+    desc: "Explore nearby coastal spots, hidden coves, small fishingzvillages, fresh seafood, markets."
   },
   {
     img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759037857/bd3def798bcc8833cfcd856220dd8b9e67bf6706_mfc8i8.jpg",
@@ -41,7 +41,7 @@ export default function ExploreTangalle() {
     <section className="h-250 md:h-380 py-10 md:py-30 px-0 lg:px-30">
       {/* Heading */}
       <div className="mb-10 text-center md:text-left">
-        <h2 className="font-[Poppins] font-semibold md:text-[36px] text-[16px] text-3xl md:text-4xl font-bold text-gray-900">
+        <h2 className="font-[Poppins] font-semibold md:text-[36px] text-[16px] text-3xl md:text-4xl font-bold text-gray-800">
           Explore Tangalle
         </h2>
         <p className="text-gray-600 mt-4 font-[Poppins] font-normal text-[10px] md:text-[20px]">
@@ -53,7 +53,7 @@ export default function ExploreTangalle() {
       </div>
 
       {/* Grid Layout */}
-      <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-5 ">
         {/* Row 1 */}
         <div className="md:col-span-2 relative rounded-2xl overflow-hidden bg-white h-[250px] md:h-[300px] group">
         <Image

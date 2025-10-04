@@ -9,17 +9,17 @@ import { useState, useRef } from "react";
 export default function WhoWeAre() {
   const features = [
     {
-      icon: <RiHomeHeartLine className="w-8 h-8 text-blue-900" />,
+      icon: <RiHomeHeartLine className="w-8 h-8 text-gray-800" />,
       title: "Comfort & Privacy",
       desc: "Spacious bedrooms, private bathrooms, and thoughtfully designed common areas ensure both gathering together and retreating alone are possible.",
     },
     {
-      icon: <LuFlower2 className="w-8 h-8 text-blue-900" />,
+      icon: <LuFlower2 className="w-8 h-8 text-gray-800" />,
       title: "Natural Beauty",
       desc: "With garden and sea-views, steps from the beach, and peaceful surroundings, you’re close to nature. Tangalle’s sun, sea, sand and stars are all yours.",
     },
     {
-      icon: <LuSparkles className="w-8 h-8 text-blue-900" />,
+      icon: <LuSparkles className="w-8 h-8 text-gray-800" />,
       title: "Memorable Experiences",
       desc: "From relaxing poolside to exploring hidden beaches and local attractions, we want your stay to be full of memorable moments.",
     },
@@ -48,7 +48,7 @@ export default function WhoWeAre() {
   }
 
   return (
-    <section className="sm:px-6 md:px-8 lg:px-30  py-12 bg-white">
+    <section className="sm:px-6 md:px-8 lg:px-30  py-16 bg-white mt-10">
       {/* Top row */}
       <div className="grid md:grid-cols-2 gap-8 items-center mb-12 justify-between">
         {/* Left image */}
@@ -61,7 +61,7 @@ export default function WhoWeAre() {
         />
         {/* Title */}
         <div className="space-y-4 order-1 md:order-2">
-        <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] leading-[100%] tracking-[0%] text-center md:text-left md:text-4xl font-bold text-[var(--button-background)]">
+        <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] leading-[100%] tracking-[0%] text-center md:text-left md:text-4xl font-bold text-gray-800">
           Who We Are
         </h2>
         <p className="font-[Poppins] font-normal text-[12px] md:text-[20px]  tracking-[0%] letter-spacing: 0px text-center md:text-justify text-gray-600 md:mt-8">
@@ -82,7 +82,7 @@ export default function WhoWeAre() {
         key={index}
         className="mouse-pointer border-[1px] border-[#D8D8D8] bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition"
       >
-        <div className="mb-4 ">{item.icon}</div>
+        <div className="mb-4 text-gray-800">{item.icon}</div>
         <h3 className="text-lg font-[Poppins] md:text-[20px] font-semibold mb-2">{item.title}</h3>
         <p className="text-gray-600 font-[Poppins] text-[16px] leading-relaxed">{item.desc}</p>
       </div>
