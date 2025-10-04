@@ -39,11 +39,10 @@ export default function ExploreTangalle() {
           fill
           className="object-cover rounded-xl md:rounded-3xl"
         />
-
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/40 rounded-2xl md:rounded-3xl" />
 
-          {/* Line indicators (centered) */}
+        {/* Line indicators (centered) */}
         <div className="absolute md:hidden mt-4  left-1/2 transform -translate-x-1/2 flex gap-2">
           {exploreSpots.map((_, i) => (
             <button
@@ -82,17 +81,7 @@ export default function ExploreTangalle() {
         </div>
 
         {/* Right stacked cards */}
-        <div   className="
-    absolute 
-    flex 
-    flex-row md:flex-col 
-    space-x-3 md:space-x-0 md:space-y-2
-    bottom-4 sm:bottom-6 md:top-1/2 md:right-10
-    left-1/2 md:left-auto 
-    -translate-x-1/2 md:translate-x-0 
-    md:-translate-y-1/2 sm:h-[100%] md:py-14
-  "
->
+        <div   className="absolute flex flex-row items-end md:flex-col space-x-3 md:space-x-0 md:space-y-2 bottom-4 sm:bottom-6 md:top-1/2 md:right-10 left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0  md:-translate-y-1/2 sm:h-[100%] md:py-14">
           {exploreSpots.slice(1).map((spot, i) => ( 
             <><div
                   key={i}

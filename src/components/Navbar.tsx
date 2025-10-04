@@ -106,7 +106,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`block px-3 py-2 rounded-md ${
                   pathname === link.href
-                    ? "text-blue-600 font-semibold bg-gray-100"
+                    ? "text-gray-900 font-semibold bg-gray-100"
                     : "text-gray-700 hover:text-gray-900"
                 }`}
                 onClick={() => setIsOpen(false)}
