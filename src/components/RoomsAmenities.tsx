@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { FaBed, FaSwimmer, FaWifi, FaUtensils, FaParking } from "react-icons/fa";
+import { FaBed, FaSwimmer, FaWifi, FaUtensils, FaParking, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { MdBathroom } from "react-icons/md";
+import { useRouter } from "next/navigation";
+
 
 const amenities = [
   {
@@ -62,6 +64,8 @@ const features = [
 ];
 
 export default function RoomsAmenities() {
+  const router = useRouter();
+
   const [currentIndex, setCurrentIndex] = useState(0); // amenities carousel
   const [currentIndex1, setCurrentIndex1] = useState(0); // special amenities carousel
   const [itemsPerView, setItemsPerView] = useState(1);
@@ -106,17 +110,18 @@ export default function RoomsAmenities() {
 
       {/* Controls */}
       <div className="absolute sm:top-150  md:top-28 top-110 flex md:gap-4 z-10 items-center  px-4 justify-between md:justify-end w-full md:right-30 right-0 ">
-        <button
-          onClick={handlePrev}
-          className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-white  items-center justify-center flex md:text-[30px] text-[20px]"
-        >
-          ←
-        </button>
+      <button
+        onClick={handlePrev}
+        className="h-[30px] w-[30px] md:h-[60px] md:w-[60px] bg-white/20 hover:bg-white/30 rounded-full border-2 border-white flex items-center justify-center text-[20px] md:text-[30px]"
+      >
+        <FaArrowLeft className="text-white text-[10px] md:text-[20px]" />
+      </button>
+
         <button
           onClick={handleNext}
-          className="p-4 md:p-3 h-[30px] w-[30px] md:h-[60px] md:w-[60px] bg-white/20 hover:bg-white/30 rounded-full border-2 border-white flex items-center justify-center md:text-[30px] text-[20px]"
+          className="h-[30px] w-[30px] md:h-[60px] md:w-[60px] bg-white/20 hover:bg-white/30 rounded-full border-2 border-white flex items-center justify-center md:text-[30px] text-[20px]"
         >
-          →
+          <FaArrowRight className="text-white text-[10px] md:text-[20px]" />
         </button>
       </div>
 
@@ -197,7 +202,9 @@ export default function RoomsAmenities() {
 
       {/* CTA */}
       <div className="flex justify-center mt-10">
-        <button className="bg-white text-[#1B3A57] md:px-6 md:py-3 px-4 py-1 w-full md:md:w-[300px]  rounded-full font-semibold hover:bg-gray-200 transition">
+        <button
+        onClick={() => router.push("/amenities")}
+        className="bg-white text-[#1B3A57] md:px-6 md:py-3 px-4 py-1 w-full md:md:w-[300px]  rounded-full font-semibold hover:bg-gray-200 transition">
           View Rooms & Rates 
         </button>
       </div>

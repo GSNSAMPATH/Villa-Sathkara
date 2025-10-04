@@ -1,27 +1,38 @@
 "use client";
 import Image from "next/image";
+import { title } from "process";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 const exploreSpots = [
   {
     img: "https://res.cloudinary.com/diatamf9x/image/upload/v1758998018/58549a7d8cdf8ed31ddb79bbd46026e27db4a099_q1ydjn.jpg",
-    title: "Unakuruwa Beach (3.6 miles)",
+    title: "Unakuruwa Beach (Few minutes)",
     desc: "Just a few minutes' walk from the villa; a peaceful beach ideal for sunbathing, swimming, or just relaxing by the sea.",
   },
   {
     img: "https://res.cloudinary.com/diatamf9x/image/upload/v1758998020/70c0e00c4d6a72c5385adfd34a596552f808ebbd_fhd1hc.png",
+    title: "Hummana Blow Hole (4.5 Miles)",
+    desc: " a spectacular natural phenomenon,especially dramatic during high tide.",
+
   },
   {
     img: "https://res.cloudinary.com/diatamf9x/image/upload/v1758998027/e3a066a252e8bff3f8319044556d6472b2d9ebc7_ltxqh3.png",
+    title: "Tangalle Lagoon (3.2 Miles)",
+    desc: "The great for lagoon tours, bird watching, and scenic boat rides.",
   },
   {
     img: "https://res.cloudinary.com/diatamf9x/image/upload/v1758998030/2deec1db3a90c33e49bf49646927b5747287747a_cfhz3d.png",
+    title: "Veherahena Temple (17 Miles)",
+    desc: " experience Sri Lankan culture, religious architecture, meditation.",
   },
   {
     img: "https://res.cloudinary.com/diatamf9x/image/upload/v1758998023/d6e0956be44732233490db31c3acda63e5c970f9_1_jnvzkh.jpg",
+    title: "Other Beaches & Local Villages",
+    desc: "Explore nearby coastal spots, hidden coves, small fishing villages, fresh seafood, markets."
   },
   {
     img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759037857/bd3def798bcc8833cfcd856220dd8b9e67bf6706_mfc8i8.jpg",
+    title: "Lotus Tower",
   }
 ];
 
@@ -57,7 +68,7 @@ export default function ExploreTangalle() {
         <div
             className="absolute bottom-0 left-0 right-0 p-6 
                     bg-gradient-to-t from-black/70 to-transparent
-                    opacity-0 group-hover:opacity-100 
+                    opacity-0 hover:opacity-100 
                     transition-opacity duration-300"
         >
             <div className="flex items-center gap-2 text-white">
@@ -72,15 +83,35 @@ export default function ExploreTangalle() {
         </div>
         </div>
 
-        <div className=" rounded-2xl overflow-hidden">
-        <Image
-            src={exploreSpots[1].img}
-            alt="spot"
-            width={400}
-            height={700}
-            className="h-[700px] md:h-[675px] w-full object-cover"
-        />
-        </div>
+        <div className="md:col-span-1 relative rounded-2xl overflow-hidden bg-white group">
+  <Image
+    src={exploreSpots[1].img}
+    alt="spot"
+    width={400}
+    height={700}
+    className="h-[700px] md:h-[675px] w-full object-cover"
+  />
+  
+  {/* Overlay with gradient */}
+  <div
+    className="absolute bottom-0 left-0 right-0 p-6 
+               bg-gradient-to-t from-black/70 to-transparent
+                    opacity-0 hover:opacity-100 
+                    transition-opacity duration-300 z-10"
+  >
+    {/* Title + Location */}
+    <div className="flex items-center gap-2 text-white">
+      <FaMapMarkerAlt className="text-white" />
+      <h4 className="text-lg font-semibold">{exploreSpots[1].title}</h4>
+    </div>
+    
+    {/* Description */}
+    <p className="text-sm text-gray-200 mt-2">
+      {exploreSpots[1].desc}
+    </p>
+  </div>
+</div>
+
 
         {/* Row 2 */}
         <div className="rounded-2xl bottom-93 relative overflow-hidden bg-white ">
@@ -91,6 +122,23 @@ export default function ExploreTangalle() {
             height={300}
             className="h-[250px] md:h-[350px] w-full object-cover"
           />
+            <div
+    className="absolute bottom-0 left-0 right-0 p-6 
+               bg-gradient-to-t from-black/70 to-transparent
+                    opacity-0 hover:opacity-100 
+                    transition-opacity duration-300 z-10"
+  >
+    {/* Title + Location */}
+    <div className="flex items-center gap-2 text-white">
+      <FaMapMarkerAlt className="text-white" />
+      <h4 className="text-lg font-semibold">{exploreSpots[2].title}</h4>
+    </div>
+    
+    {/* Description */}
+    <p className="text-sm text-gray-200 mt-2">
+      {exploreSpots[2].desc}
+    </p>
+  </div>
         </div>
         <div className="rounded-2xl bottom-93 relative overflow-hidden">
           <Image
@@ -100,6 +148,23 @@ export default function ExploreTangalle() {
             height={300}
             className="h-[250px] md:h-[350px] w-full object-cover"
           />
+            <div
+    className="absolute bottom-0 left-0 right-0 p-6 
+               bg-gradient-to-t from-black/70 to-transparent
+                    opacity-0 hover:opacity-100 
+                    transition-opacity duration-300 z-10"
+  >
+    {/* Title + Location */}
+    <div className="flex items-center gap-2 text-white">
+      <FaMapMarkerAlt className="text-white" />
+      <h4 className="text-lg font-semibold">{exploreSpots[3].title}</h4>
+    </div>
+    
+    {/* Description */}
+    <p className="text-sm text-gray-200 mt-2">
+      {exploreSpots[3].desc}
+    </p>
+  </div>
         </div>
         <div /> {/* empty to keep grid alignment */}
 
@@ -112,6 +177,23 @@ export default function ExploreTangalle() {
             height={400}
             className="h-[300px] md:h-[350px] w-full object-cover"
           />
+            <div
+    className="absolute bottom-0 left-0 right-0 p-6 
+               bg-gradient-to-t from-black/70 to-transparent
+                    opacity-0 hover:opacity-100 
+                    transition-opacity duration-300 z-10"
+  >
+    {/* Title + Location */}
+    <div className="flex items-center gap-2 text-white">
+      <FaMapMarkerAlt className="text-white" />
+      <h4 className="text-lg font-semibold">{exploreSpots[4].title}</h4>
+    </div>
+    
+    {/* Description */}
+    <p className="text-sm text-gray-200 mt-2">
+      {exploreSpots[4].desc}
+    </p>
+  </div>
         </div>
       </div>
 
@@ -127,7 +209,7 @@ export default function ExploreTangalle() {
               className="object-cover w-full h-[150px]"
             />
             <p className="absolute bottom-2 left-2 text-white text-xs flex items-center gap-1">
-              <span>📍</span> Hikkaduwa, Srilanka
+              <span>📍</span>{exploreSpots[0].title}
             </p>
           </div>
           <div className="relative rounded-lg overflow-hidden">
@@ -139,7 +221,7 @@ export default function ExploreTangalle() {
               className="object-cover w-full h-[150px]"
             />
             <p className="absolute bottom-2 left-2 text-white text-xs flex items-center gap-1">
-              <span>📍</span> Hikkaduwa, Srilanka
+              <span>📍</span> {exploreSpots[1].title}
             </p>
           </div>
         </div>
@@ -154,7 +236,7 @@ export default function ExploreTangalle() {
             className="object-cover w-full h-[150px]"
           />
           <p className="absolute bottom-2 left-2 text-white text-xs flex items-center gap-1">
-            <span>📍</span> Hikkaduwa, Srilanka
+            <span>📍</span> {exploreSpots[2].title}
           </p>
         </div>
 
@@ -170,7 +252,7 @@ export default function ExploreTangalle() {
                 className="object-cover w-full h-[150px] rounded-lg"
               />
               <p className="absolute bottom-2 left-2 text-white text-xs flex items-center gap-1">
-                <span>📍</span> Hikkaduwa, Srilanka
+                <span>📍</span> {exploreSpots[3].title}
               </p>
             </div>
             <div className="relative rounded-lg overflow-hidden">
@@ -182,7 +264,7 @@ export default function ExploreTangalle() {
                 className="object-cover w-full h-[150px] rounded-lg"
               />
               <p className="absolute bottom-2 left-2 text-white text-xs flex items-center gap-1">
-                <span>📍</span> Hikkaduwa, Srilanka
+                <span>📍</span> {exploreSpots[4].title}
               </p>
             </div>
           </div>
@@ -195,7 +277,7 @@ export default function ExploreTangalle() {
               className="object-cover w-full h-[312px]"
             />
             <p className="absolute bottom-2 left-2 text-white text-xs flex items-center gap-1">
-              <span>📍</span> Hikkaduwa, Srilanka
+              <span>📍</span> {exploreSpots[5].title}
             </p>
           </div>
         </div>

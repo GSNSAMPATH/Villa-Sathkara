@@ -74,7 +74,7 @@ export default function Testimonials() {
             style={{ transform: `translateX(-${index * 100}%)` }}
           >
             {testimonials.map((item, i) => (
-              <div key={i} className="min-w-full px-1 bg-white">
+              <div key={i} className="min-w-full px-1 bg-gray-50">
                 <div className="bg-white rounded-lg shadow-sm p-8 flex flex-col gap-4 h-full ">
                   <FaQuoteLeft className="text-[16px] text-[#0D3559]" />
                   <p className="text-gray-700 font-[Poppins] md:text-[16px] text-[12px] leading-relaxed">{item.text}</p>

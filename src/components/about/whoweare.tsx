@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { RiHomeHeartLine } from "react-icons/ri";
 import { LuFlower2, LuSparkles } from "react-icons/lu";
 import React from "react";
+import { FaA, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const villaImages = [
   "https://res.cloudinary.com/diatamf9x/image/upload/v1759111542/251c7a09f8965b8a18d4ec50f869f0929cc16752_ths8ni.jpg",
@@ -163,9 +164,9 @@ export default function WhoWeAre() {
   {/* Prev Button */}
   <button
     onClick={prevSlide}
-    className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-black  items-center justify-center flex md:text-[30px] text-[20px] text-black shadow hover:scale-105"
+    className="p-2 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-black  items-center justify-center flex md:text-[30px] text-[20px] text-black shadow hover:scale-105"
   >
-    ←
+    <FaArrowLeft className="text-black text-[20px] md:text-[30px]" />
   </button>
 
  {/* Thumbnails */}
@@ -195,9 +196,9 @@ export default function WhoWeAre() {
   {/* Next Button */}
   <button
     onClick={nextSlide}
-    className="p-4 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-black  items-center justify-center flex md:text-[30px] text-[20px] text-black shadow hover:scale-105"
+    className="p-2 md:p-4  h-[30px] w-[30px] md:h-[60px] md:w-[60px]  bg-white/20 hover:bg-white/30 rounded-full border-2 border-black  items-center justify-center flex md:text-[30px] text-[20px] text-black shadow hover:scale-105"
   >
-    →
+    <FaArrowRight className="text-[20px] md:text-[25px]"/>
   </button>
 </div>
 
