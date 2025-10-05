@@ -16,5 +16,6 @@ module.exports = {
         disallow: ["/api/*", "/admin/*"],
       },
     ],
+      additionalSitemaps: ["https://www.villasathkara.com/sitemap.xml"],
   },
 };
