@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,7 +21,6 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-
 
 export const metadata: Metadata = {
   title: {
@@ -48,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Villa Sathkara",
     images: [
       {
-        url: "favicon.ico",
+        url: "https://www.villasathkara.com/logo.png",
         width: 1200,
         height: 630,
         alt: "Villa Sathkara Pool View in Tangalle",
@@ -62,7 +60,9 @@ export const metadata: Metadata = {
     title: "Villa Sathkara | Luxury Beachfront Villa in Tangalle",
     description:
       "Private 4-bedroom villa with pool & garden in Tangalle, Sri Lanka.",
-    images: ["https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp"],
+    images: [
+      "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
+    ],
   },
   alternates: {
     canonical: "https://www.villasathkara.com",
@@ -70,25 +70,47 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.villasathkara.com"),
 };
 
-
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <head />
-      <Navbar />
-      <WhatsAppButton />
+      <head>
+        {/* ✅ Structured Data for Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Villa Sathkara",
+              url: "https://www.villasathkara.com",
+              logo: "https://www.villasathkara.com/logo.png",
+              sameAs: [
+                "https://www.facebook.com/villasathkara",
+                "https://www.instagram.com/villasathkara"
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+94-71-234-5678",
+                contactType: "customer service",
+                areaServed: "LK",
+                availableLanguage: ["English", "Sinhala"]
+              },
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
+        <Navbar />
+        <WhatsAppButton />
         {children}
+        <Footer />
       </body>
-
-      <Footer />
     </html>
   );
 }
