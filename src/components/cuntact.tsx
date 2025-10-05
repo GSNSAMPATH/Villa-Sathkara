@@ -13,8 +13,8 @@ export default function Cuntact() {
             </div>
             <div className="flex items-center  flex-col justify-between w-full">
             <button
-            onClick={() => window.open("https://wa.me/94765840515?text=Hello!%20I%20want%20to%20know%20more%20about%20Villa%20Sathkara.", "_blank")}
-            className="flex items-center justify-center gap-2 bg-[#1B3A57] md:px-6 md:py-3 py-2 w-full md:w-[300px] rounded-3xl hover:bg-green-700 text-white font-semibold transition-colors duration-200"
+            onClick={() => window.open("https://wa.me/+420603525235?text=Hello!%20I%20want%20to%20know%20more%20about%20Villa%20Sathkara.", "_blank")}
+            className="flex items-center justify-center gap-2 bg-[#1B3A57] md:px-6 md:py-3 py-2 w-full md:w-[300px] rounded-3xl hover:bg-[#1B3A52] text-white font-semibold transition-colors duration-200"
             >
             <FaWhatsapp className="text-lg" />
             Contact Us

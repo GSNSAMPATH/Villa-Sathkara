@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
@@ -24,6 +25,9 @@ const exploreSpots = [
 ];
 
 export default function ExploreTangalle() {
+
+        const router = useRouter();
+
         const [index, setIndex] = useState(0);
     
         const prev = () => setIndex((i) => (i - 1 + exploreSpots.length) % exploreSpots.length);
@@ -65,7 +69,9 @@ export default function ExploreTangalle() {
               Lankan culture. From surfing and whale watching to temple visits
               and safaris, every day brings a new adventure.
             </p>
-            <button className="hidden md:flex w-fit px-6 py-3 bg-white text-black font-medium rounded-full flex items-center gap-2 hover:bg-gray-200 transition">
+            <button
+              onClick={() => router.push("/amenities")} 
+            className="hidden md:flex w-fit px-6 py-3 bg-white text-black font-medium rounded-full flex items-center gap-2 hover:bg-gray-200 transition">
               Explore Now 
             </button>
           </div>

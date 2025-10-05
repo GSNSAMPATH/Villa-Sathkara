@@ -74,9 +74,10 @@ export default function Contact() {
                                         <h3 className="font-semibold">Address</h3>
                                     </div>
                                     <p className="ml-7 text-gray-300">
-                                        14/Aa, Migahapara, <br />
-                                        Mahavihara Rd, <br />
-                                        Ahangama, Sri Lanka
+                                        Bodhi Mawatha,<br />
+                                        Unakaruwa, <br />
+                                        Tangalle, <br /> 
+                                        82200, Sri Lanka
                                     </p>
                                 </div>
 

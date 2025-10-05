@@ -71,7 +71,7 @@ export default function Gallery() {
                                     </div>
                                         <div className="text-center mt-4 md:mt-10">
                                         <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] text-center font-bold mt-4 text-[var(--button-background)]">Gallery</h2>
-                                        <p className="font-[Poppins]  font-normal text-[12px] md:text-[20px] mt-6 text-[#000000]">Tangalle is more than just a beach town — it’s a blend of golden shores, hidden tropical bays, fresh seafood, and authentic Sri Lankan culture. From surfing and whale watching to temple visits and safaris, every day brings a new adventure.</p>
+                                        <p className="font-[Poppins]  font-normal text-[12px] md:text-[20px] mt-6 text-[#000000]">Tangalle is more than just a beach town. it’s a blend of golden shores, hidden tropical bays, fresh seafood, and authentic Sri Lankan culture. From surfing and whale watching to temple visits and safaris, every day brings a new adventure.</p>
                                         </div>
                                     </div>
                                 </section>

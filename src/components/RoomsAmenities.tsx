@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaBed, FaSwimmer, FaWifi, FaUtensils, FaParking, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { MdBathroom } from "react-icons/md";
-import { FaA } from "react-icons/fa6";
-import router from "next/router";
+import { useRouter } from "next/navigation";
+
 
 const amenities = [
   {
@@ -64,6 +64,8 @@ const features = [
 ];
 
 export default function RoomsAmenities() {
+  const router = useRouter();
+
   const [currentIndex, setCurrentIndex] = useState(0); // amenities carousel
   const [currentIndex1, setCurrentIndex1] = useState(0); // special amenities carousel
   const [itemsPerView, setItemsPerView] = useState(1);

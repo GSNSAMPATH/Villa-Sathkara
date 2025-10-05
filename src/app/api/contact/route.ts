@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     const mailOptions = {
       from: email,
       to: process.env.EMAIL_TO, // where you want to receive emails
-      subject: subject || "Reservation Inquiry",
+      subject: "Web Contact Form Submission",
       text: `
         Name: ${firstName} ${lastName}
         Email: ${email}

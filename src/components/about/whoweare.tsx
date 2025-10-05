@@ -1,17 +1,19 @@
 "use client";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { RiHomeHeartLine } from "react-icons/ri";
 import { LuFlower2, LuSparkles } from "react-icons/lu";
 import React from "react";
-import { FaA, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
+
 
 const villaImages = [
   "https://res.cloudinary.com/diatamf9x/image/upload/v1759111542/251c7a09f8965b8a18d4ec50f869f0929cc16752_ths8ni.jpg",
   "https://res.cloudinary.com/diatamf9x/image/upload/v1759480106/_DSC3516_th1grg.jpg",
   "https://res.cloudinary.com/diatamf9x/image/upload/v1759480021/pool_f0jqhh.jpg",
   "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
+
 ];
 
   const features = [
@@ -38,6 +40,7 @@ export default function WhoWeAre() {
   const [current, setCurrent] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
+  const router = useRouter();
   // Detect mobile on mount and on resize
   React.useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -78,9 +81,9 @@ export default function WhoWeAre() {
     }
 
   return (
-    <section className="bg-white text-white mt-5 md:mt-20 py-4 md:py-16  lg:px-20 text-center">
+    <section className="bg-white text-white mt-5 md:mt-20 py-4 md:py-16 px-4 lg:px-20 text-center">
       {/* Heading */}
-      <div className="mb-12 px-2">
+      <div className="mb-12 px-2 md:px-0">
         <div className="relative w-full flex justify-center mt-10">
         <Image
             src="https://res.cloudinary.com/diatamf9x/image/upload/v1759466793/Layer_1_rd0euk.png"
@@ -204,7 +207,9 @@ export default function WhoWeAre() {
 
       {/* Book Now */}
       <div className="mt-10">
-        <button className="md:px-6 md:py-3 py-2 w-full md:w-[300px] rounded-full bg-[#1B3A57]  text-white font-medium">
+        <button
+        onClick={() => router.push("/contact")} 
+        className="md:px-6 md:py-3 py-2 w-full md:w-[300px] rounded-full bg-[#1B3A57]  text-white font-medium">
           Book Now
         </button>
       </div>
