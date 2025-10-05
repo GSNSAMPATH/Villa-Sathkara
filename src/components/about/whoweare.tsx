@@ -112,7 +112,7 @@ export default function WhoWeAre() {
       </div>
 
        {/* ---------- Mobile carousel (replaces Flowbite mobile markup) ---------- */}
-      <div className="md:hidden relative mb-12 px-2 ">
+      <div className="md:hidden relative mb-12 px-0 ">
         {/* track wrapper (touch handlers) */}
         <div
           className="overflow-hidden rounded-2xl"
