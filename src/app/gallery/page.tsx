@@ -1,5 +1,27 @@
-
 import Image from 'next/image'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gallery | Villa Sathkara Tangalle",
+  description:
+    "View photos of Villa Sathkara – luxury interiors, private pool, tropical gardens, and beautiful Tangalle beachfront scenes in Sri Lanka.",
+  openGraph: {
+    title: "Villa Sathkara Gallery | Luxury Villa in Tangalle, Sri Lanka",
+    description:
+      "Browse the Villa Sathkara photo gallery featuring our villa, pool, garden, and Unakuruwa Beach views in Tangalle.",
+    url: "https://www.villasathkara.com/gallery",
+    siteName: "Villa Sathkara",
+    images: [
+      {
+        url: "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
+        width: 1200,
+        height: 630,
+        alt: "Villa Sathkara Gallery Tangalle",
+      },
+    ],
+  },
+};
+
 
 const galleryImages = [
   { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759479387/pool_xa6qcu.webp", className: "md:col-span-2 md:row-span-2 h-[400px] md:h-[500px]" },
@@ -28,9 +50,9 @@ export default function Gallery() {
                             height={500}  // scale height proportionally
                             className="inset-0 w-full h-full object-cover" // responsive scaling
                         />
-                        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 text-center px-4 md:px-24">
+                        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 text-center sm:px-4 md:px-24 ">
                             <h1 className="relative font-[poppins] font-semibold text-[16px] sm:text-[24px] md:text-[30px] top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center mb-8 md:mb-16">Gallery</h1>
-                            <p className="relative font-[poppins] font-semibold text-[10px] sm:text-[16px] md:text-[20px] top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-center md:px-24 px-4">Tangalle is more than just a beach town. it’s a blend of golden shores, hidden tropical bays, fresh seafood, and authentic Sri Lankan culture. From surfing and whale watching to temple visits and safaris, every day brings a new adventure.</p>
+                            <p className="relative font-[poppins] font-semibold text-[10px] sm:text-[16px] md:text-[20px] top-1/3 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-center md:px-2 lg:px-24 px-4">Tangalle is more than just a beach town. it’s a blend of golden shores, hidden tropical bays, fresh seafood, and authentic Sri Lankan culture. From surfing and whale watching to temple visits and safaris, every day brings a new adventure.</p>
                         </div>
 
                         </section>
@@ -40,14 +62,14 @@ export default function Gallery() {
                                   <div className="mb-12 bg-white">
                                     <div className="relative w-full flex justify-center mt-10">
                                     <Image
-                                        src="https://res.cloudinary.com/diatamf9x/image/upload/v1758885559/Group_33681_imccts.png"
+                                        src="https://res.cloudinary.com/diatamf9x/image/upload/v1759466793/Layer_1_rd0euk.png"
                                         alt="Villa Sathkara"
                                         width={600}   // base width for Next.js optimization
                                         height={500}  // scale height proportionally
-                                        className="w-[90%] max-w-[50px] md:max-w-[150px] h-auto" // responsive scaling
+                                        className="w-[90%] max-w-[150px] md:max-w-[350px] h-auto" // responsive scaling
                                     />
                                     </div>
-                                        <div className="text-center mt-4">
+                                        <div className="text-center mt-4 md:mt-10">
                                         <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] text-center font-bold mt-4 text-[var(--button-background)]">Gallery</h2>
                                         <p className="font-[Poppins]  font-normal text-[12px] md:text-[20px] mt-6 text-[#000000]">Tangalle is more than just a beach town — it’s a blend of golden shores, hidden tropical bays, fresh seafood, and authentic Sri Lankan culture. From surfing and whale watching to temple visits and safaris, every day brings a new adventure.</p>
                                         </div>

@@ -26,7 +26,7 @@ export default function Hero() {
       <div
         className="absolute bottom-0  w-full h-3/4 sm:h-1/2 rounded-[16px] opacity-100"
         style={{
-            background: "linear-gradient(0.59deg, rgba(23, 30, 35, 0.92) 20.81%, rgba(27, 58, 87, 0) 99.49%)"
+            background: "linear-gradient(0.59deg, rgba(27, 58, 87, 0.92) 20.81%, rgba(27, 58, 87, 0) 99.49%)"
         }}
         ></div>
 

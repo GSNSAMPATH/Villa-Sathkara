@@ -41,7 +41,7 @@ export default function ExploreTangalle() {
     <section className="h-250 md:h-380 py-10 md:py-30 px-0 lg:px-30">
       {/* Heading */}
       <div className="mb-10 text-center md:text-left">
-        <h2 className="font-[Poppins] font-semibold md:text-[36px] text-[16px] text-3xl md:text-4xl font-bold text-gray-800">
+        <h2 className="font-[Poppins] font-semibold md:text-[36px] text-[16px] text-3xl md:text-4xl font-bold text-[#1B3A57]">
           Explore Tangalle
         </h2>
         <p className="text-gray-600 mt-4 font-[Poppins] font-normal text-[10px] md:text-[20px]">

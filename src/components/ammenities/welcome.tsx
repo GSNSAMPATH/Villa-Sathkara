@@ -7,14 +7,14 @@ export default function Welcome() {
       <div className="mb-12 bg-white">
         <div className="relative w-full flex justify-center mt-10">
         <Image
-            src="https://res.cloudinary.com/diatamf9x/image/upload/v1758885559/Group_33681_imccts.png"
+            src="https://res.cloudinary.com/diatamf9x/image/upload/v1759466793/Layer_1_rd0euk.png"
             alt="Villa Sathkara"
             width={600}   // base width for Next.js optimization
             height={500}  // scale height proportionally
-            className="w-[90%] max-w-[50px] md:max-w-[150px] h-auto" // responsive scaling
+            className="w-[90%] max-w-[150px] md:max-w-[350px] h-auto" // responsive scaling
         />
         </div>
-            <div className="text-justify mt-4">
+            <div className="text-justify mt-4 md:mt-10">
             <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] text-center font-bold mt-4 text-[var(--button-background)]">Villa Sathkara Amenitiesity</h2>
             <p className="font-[Poppins]  font-normal text-[12px] md:text-[20px] mt-6 text-[#000000]">Our villa is designed to provide everything you need for a relaxing and carefree holiday. From spacious air-conditioned bedrooms and fully equipped kitchens to a private swimming pool and open terraces, every detail is thoughtfully prepared to make you feel at home. Stay connected with free WiFi, enjoy the convenience of a washing machine, and start your mornings with a delicious breakfast on request — all while being just steps away from the beach. </p>
             </div>

@@ -6,28 +6,28 @@ import { useRouter } from "next/navigation";
 
 const features = [
   {
-    icon: <FaBed className="mx-auto  sm:text-3xl text-gray-800 sm:mb-4" />,
+    icon: <FaBed className="mx-auto  sm:text-3xl text-[#1B3A57] sm:mb-4" />,
     title: "Four En-Suite Bedrooms",
     description: "each designed with comfort and elegance in mind",
   },
   {
-    icon: <MdKitchen className="mx-auto sm:text-3xl text-gray-800 sm:mb-4" />,
+    icon: <MdKitchen className="mx-auto sm:text-3xl text-[#1B3A57] sm:mb-4" />,
     title: "Modern Kitchen & A/C",
     description:
       "A fully equipped modern kitchen, flat-screen TV and a washing machine.",
   },
   {
-    icon: <FaSwimmer className="mx-auto sm:text-3xl text-gray-800 sm:mb-4" />,
+    icon: <FaSwimmer className="mx-auto sm:text-3xl text-[#1B3A57] sm:mb-4" />,
     title: "Private Pool & Hot Tub",
     description: "For relaxing evenings under the sky.",
   },
   {
-    icon: <FaWifi className="mx-auto sm:text-3xl text-gray-800 sm:mb-4" />,
+    icon: <FaWifi className="mx-auto sm:text-3xl text-[#1B3A57] sm:mb-4" />,
     title: "Free WiFi & Parking",
     description: "Free WiFi, Private parking and Beautiful garden and sea views.",
   },
   {
-    icon: <FaUtensils className="mx-auto sm:text-3xl text-gray-800 sm:mb-4" />,
+    icon: <FaUtensils className="mx-auto sm:text-3xl text-[#1B3A57] sm:mb-4" />,
     title: "On-site Dining & BBQ",
     description:
       "À la carte dining with family-friendly restaurant & BBQ facilities.",
@@ -50,7 +50,7 @@ export default function Features() {
         className="w-[90%] max-w-[150px] md:max-w-[350px] h-auto" // responsive scaling
       />
     </div>
-        <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] leading-[100%] tracking-[0%] text-center align-middle text-lg sm:text-2xl font-semibold text-gray-800">
+        <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] leading-[100%] tracking-[0%] text-center align-middle text-lg sm:text-2xl font-semibold text-[#1B3A57]">
           Paradise in Unakuruwa
         </h2>
         <p className="font-[Poppins] font-normal text-[12px] md:text-[20px]  tracking-[0%] letter-spacing: 0px text-center align-middle text-sm sm:text-lg max-w-[993px] mx-auto font-medium text-[#000000]">
@@ -76,10 +76,10 @@ export default function Features() {
         {features.slice(3).map((feature, index) => (
           <div
             key={index}
-            className="mouse-pointer border-[1px] border-[#D8D8D8] rounded-md md:rounded-2xl md:p-6 p-2 flex flex-col items-center  min-h-[20px] md:min-h-[220px]"
+            className="mouse-pointer border-[1px] border-[#D8D8D8] rounded-md md:rounded-2xl md:p-6 p-2 flex flex-col items-center  min-h-[20px] md:min-h-[220px] "
           >
             {feature.icon}
-            <h3 className="font-[poppins] font-medium text-[10px] align-middle md:text-[20px]">{feature.title}</h3>
+            <h3 className="font-[poppins] font-medium text-[10px]  align-middle md:text-[20px]">{feature.title}</h3>
             <p className="text-gray-500 font-poppins font-normal text-[8px] md:text-[16px]">{feature.description}</p>
           </div>
         ))}
@@ -89,7 +89,7 @@ export default function Features() {
       <div className="mt-20 ">
         <button 
         onClick={() => router.push("/amenities")}
-        className="bg-gray-800 - text-white px-6 py-2 md:py-3 w-full md:md:w-[300px] rounded-full font-semibold">
+        className="bg-[#1B3A57] - text-white px-6 py-2 md:py-3 w-full md:md:w-[300px] rounded-full font-semibold">
           Check Availability 
         </button>
       </div>

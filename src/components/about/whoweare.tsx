@@ -83,14 +83,14 @@ export default function WhoWeAre() {
       <div className="mb-12 px-2">
         <div className="relative w-full flex justify-center mt-10">
         <Image
-            src="https://res.cloudinary.com/diatamf9x/image/upload/v1758885559/Group_33681_imccts.png"
+            src="https://res.cloudinary.com/diatamf9x/image/upload/v1759466793/Layer_1_rd0euk.png"
             alt="Villa Sathkara"
             width={600}   // base width for Next.js optimization
             height={500}  // scale height proportionally
-            className="w-[90%] max-w-[50px] md:max-w-[150px] h-auto" // responsive scaling
+            className="w-[90%] max-w-[150px] md:max-w-[350px] h-auto" // responsive scaling
         />
         </div>
-            <div className="text-justify mt-4 ">
+            <div className="text-justify mt-4 md:mt-10">
             <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[36px] text-center font-bold mt-4 text-[var(--button-background)]">Who We Are ?</h2>
             <p className="font-[Poppins]  font-normal text-[12px] md:text-[20px] mt-6 text-[#000000]">Villa Sathkara was created for travelers who want more than just a place to stay. It’s a place to unwind in style, reconnect with loved ones, and experience the best of Southern Sri Lanka without compromise. </p>
             <p className="font-[Poppins] font-normal text-[12px] md:text-[20px] mt-2 text-[#000000]">Situated in Bodhi Mawatha, Unakuruwa, Tangalle, our villa embodies luxury and authenticity. We combine high-end amenities with local warmth — caring staff, thoughtful service, and opportunities to explore. Whether you’re here for adventure, relaxation, or a little of both, Villa Sathkara is your gateway.</p>

@@ -55,7 +55,7 @@ export default function Navbar() {
           <div className="hidden md:flex">
             <Link
               href="/contact"
-              className="bg-gray-800 text-white px-4 py-2 rounded-[20px] hover:bg-blue-800"
+              className="bg-[#1B3A57] text-white px-4 py-2 rounded-[20px] hover:bg-blue-800"
             >
               Book Now
             </Link>

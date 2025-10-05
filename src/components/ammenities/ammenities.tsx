@@ -32,7 +32,7 @@ export default function VillaFeatures() {
       images: [
         "https://res.cloudinary.com/diatamf9x/image/upload/v1759311825/_DSC3663_fmphv2.webp", 
         "https://res.cloudinary.com/diatamf9x/image/upload/v1758990066/3411e7633cc774b1ce0cba460fb8737462e18323_hvceix.jpg",
-        
+        "https://res.cloudinary.com/diatamf9x/image/upload/v1759311724/_DSC3686_umgmla.webp"
       ],
     },
     {
@@ -47,14 +47,14 @@ export default function VillaFeatures() {
       title: "Free WiFi & Parking",
       describtion: "High-speed internet and ample free parking space.",
       items: ["High-speed internet", "Ample free parking space"],
-      images: ["https://res.cloudinary.com/diatamf9x/image/upload/v1759247222/Agro--864x540_r08ggc.jpg", "https://res.cloudinary.com/diatamf9x/image/upload/v1759247222/Agro--864x540_r08ggc.jpg"],
+      images: ["https://res.cloudinary.com/diatamf9x/image/upload/v1759479347/12434_tw1hby.webp", "https://res.cloudinary.com/diatamf9x/image/upload/v1759480003/DJI_20250831193336_0490_D_jetuc4.webp"],
     },
     {
       icon: <FaUtensils className="sm:text-3xl text-[#1B3A57] mr-4" />,
       title: "On-site Dining & BBQ",
       describtion: "Outdoor dining space with BBQ grill included.",
       items: ["Outdoor dining space", "BBQ grill included"],
-      images: ["https://res.cloudinary.com/diatamf9x/image/upload/v1759247222/Agro--864x540_r08ggc.jpg", "https://res.cloudinary.com/diatamf9x/image/upload/v1759247222/Agro--864x540_r08ggc.jpg"],
+      images: ["https://res.cloudinary.com/diatamf9x/image/upload/v1759634871/_DSC4324_eoacmt.webp", "https://res.cloudinary.com/diatamf9x/image/upload/v1759634870/_DSC3530_jeafzr.webp","https://res.cloudinary.com/diatamf9x/image/upload/v1759311825/_DSC3663_fmphv2.webp"],
     },
   ];
 
