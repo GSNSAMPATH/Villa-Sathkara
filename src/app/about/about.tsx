@@ -14,8 +14,8 @@ export default function About() {
     "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
     "https://res.cloudinary.com/diatamf9x/image/upload/v1759111542/251c7a09f8965b8a18d4ec50f869f0929cc16752_ths8ni.jpg",
     "https://res.cloudinary.com/diatamf9x/image/upload/v1759479431/_DSC4346-Edit_uck73l.webp",
-    "https://res.cloudinary.com/diatamf9x/image/upload/v1759634870/_DSC3530_jeafzr.webp",
-    "https://res.cloudinary.com/diatamf9x/image/upload/v1759480117/DJI_20250831090508_0379_D-HDR-2_rqwl0k.jpg",
+    // "https://res.cloudinary.com/diatamf9x/image/upload/v1759634870/_DSC3530_jeafzr.webp",
+    // "https://res.cloudinary.com/diatamf9x/image/upload/v1759480117/DJI_20250831090508_0379_D-HDR-2_rqwl0k.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,7 +24,7 @@ export default function About() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [images.length]);
