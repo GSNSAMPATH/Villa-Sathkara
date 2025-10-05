@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Villa Sathkara",
     images: [
       {
-        url: "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
+        url: "favicon.ico",
         width: 1200,
         height: 630,
         alt: "Villa Sathkara Pool View in Tangalle",
