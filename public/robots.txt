@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/*
+Disallow: /admin/*
+
+# Host
+Host: https://www.villasathkara.com
+
+# Sitemaps
+Sitemap: https://www.villasathkara.com/sitemap.xml
