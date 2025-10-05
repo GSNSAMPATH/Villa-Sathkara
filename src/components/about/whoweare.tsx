@@ -78,7 +78,7 @@ export default function WhoWeAre() {
     }
 
   return (
-    <section className="bg-white text-white mt-5 md:mt-20 py-4 md:py-16 px-4 lg:px-20 text-center">
+    <section className="bg-white text-white mt-5 md:mt-20 py-4 md:py-16  lg:px-20 text-center">
       {/* Heading */}
       <div className="mb-12 px-2">
         <div className="relative w-full flex justify-center mt-10">
@@ -112,7 +112,7 @@ export default function WhoWeAre() {
       </div>
 
        {/* ---------- Mobile carousel (replaces Flowbite mobile markup) ---------- */}
-      <div className="md:hidden relative mb-12 px-0 ">
+      <div className="md:hidden relative mb-12 px-2 ">
         {/* track wrapper (touch handlers) */}
         <div
           className="overflow-hidden rounded-2xl"
