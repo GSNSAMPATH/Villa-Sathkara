@@ -38,6 +38,11 @@ export const metadata: Metadata = {
     "4 Bedroom Villa Sri Lanka",
   ],
   authors: [{ name: "Villa Sathkara Team" }],
+  icons: {
+    icon: "https://www.villasathkara.com/logo.png",
+    shortcut: "https://www.villasathkara.com/logo.png",
+    apple: "https://www.villasathkara.com/logo.png",
+  },
   openGraph: {
     title: "Villa Sathkara | Luxury Beachfront Villa in Tangalle, Sri Lanka",
     description:
