@@ -87,7 +87,7 @@ export default function Contact() {
                                         <FaPhoneAlt className="text-lg" />
                                         <h3 className="font-semibold">Phone number</h3>
                                     </div>
-                                    <p className="ml-7 text-gray-300">+9471 123 1234</p>
+                                    <p className="ml-7 text-gray-300">+42 060 352 5235</p>
                                     <p className="ml-7 text-gray-400 text-sm">Available 24/7 for reservations and inquiries</p>
                                 </div>
 

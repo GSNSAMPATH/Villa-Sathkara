@@ -99,7 +99,7 @@ export default function RootLayout({
               ],
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+94-71-234-5678",
+                telephone: "+42 060 352 5235",
                 contactType: "customer service",
                 areaServed: "LK",
                 availableLanguage: ["English", "Sinhala"]
