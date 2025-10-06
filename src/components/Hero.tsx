@@ -17,7 +17,7 @@ export default function Hero() {
         <source src="https://res.cloudinary.com/diatamf9x/video/upload/v1759765908/Video_Project_1_mwjg1n.mp4" type="video/mp4" />
         
       
-        {/* <source src="https://res.cloudinary.com/diatamf9x/video/upload/v1758965642/Villa_Sathkara_tmkzib.webm" type="video/webm" /> */}
+        <source src="https://res.cloudinary.com/diatamf9x/video/upload/v1759768576/Video_Project_1_2_gxxwp9.webm" type="video/webm" />
         
         Your browser does not support the video tag.
       </video>
