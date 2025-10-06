@@ -226,15 +226,16 @@ export default function Contact() {
 
             <section className=" mt-12 sm:px-8 md:px-8  lg:px-20 py-12 w-full">
                 <div className="flex justify-center h-[50vh] md:h-[70vh]  mx-auto">
-                <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0346312418564!2d-73.87072598459423!3d40.7135141793316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25f8ff6a2e8f9%3A0xc80b8f06e177fe62!2sForest%20Hills%2C%20Queens%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                        width="100%"
-                        height="100%"
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        className="rounded-xl border-0 shadow-md "
-                ></iframe>
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29978.94668621035!2d80.7565386933539!3d6.007662538454867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae14b007172b1fd%3A0xcfb1953975296db4!2sVilla%20Sathkara%20Unakuruwa!5e0!3m2!1ssi!2slk!4v1759745726606!5m2!1ssi!2slk"
+                    width="100%"
+                    height="100%"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-xl border-0 shadow-md"
+                    />
+
                 </div>
             </section>
                 
