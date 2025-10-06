@@ -40,6 +40,7 @@ export default function ExploreTangalle() {
         <Image
           src="https://res.cloudinary.com/diatamf9x/image/upload/v1758998018/58549a7d8cdf8ed31ddb79bbd46026e27db4a099_q1ydjn.jpg"
           alt="Tangalle"
+          loading="lazy"
           fill
           className="object-cover rounded-xl md:rounded-3xl"
         />
@@ -97,6 +98,7 @@ export default function ExploreTangalle() {
                       src={spot.img}
                       alt={spot.title}
                       fill
+                      loading="lazy"
                       className="object-cover " />
 
               </div>

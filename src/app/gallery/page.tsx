@@ -48,6 +48,7 @@ export default function Gallery() {
                             alt="Villa Sathkara"
                             width={600}   // base width for Next.js optimization
                             height={500}  // scale height proportionally
+                            priority
                             className="inset-0 w-full h-full object-cover" // responsive scaling
                         />
                         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 text-center sm:px-4 md:px-24 ">
@@ -66,6 +67,7 @@ export default function Gallery() {
                                         alt="Villa Sathkara"
                                         width={600}   // base width for Next.js optimization
                                         height={500}  // scale height proportionally
+                                        loading="lazy"
                                         className="w-[90%] max-w-[150px] md:max-w-[350px] h-auto" // responsive scaling
                                     />
                                     </div>
@@ -91,6 +93,7 @@ export default function Gallery() {
                                             alt="spot"
                                             width={800}
                                             height={500}
+                                            loading='lazy'
                                             className="h-[250px] md:h-[300px] w-full object-cover"
                                         />
 
@@ -102,6 +105,7 @@ export default function Gallery() {
                                             alt="spot"
                                             width={400}
                                             height={700}
+                                            loading='lazy'
                                             className="h-[700px] md:h-[675px] w-full object-cover"
                                         />
                                     </div>
@@ -113,6 +117,7 @@ export default function Gallery() {
                                                 alt="spot"
                                                 width={400}
                                                 height={300}
+                                                loading='lazy'
                                                 className="h-[250px] md:h-[350px] w-full object-cover"
                                               />
                                             </div>
@@ -122,6 +127,7 @@ export default function Gallery() {
                                                 alt="spot"
                                                 width={400}
                                                 height={300}
+                                                loading='lazy'
                                                 className="h-[250px] md:h-[350px] w-full object-cover"
                                               />
                                             </div>
@@ -134,6 +140,7 @@ export default function Gallery() {
                                                 alt="spot"
                                                 width={1200}
                                                 height={400}
+                                                loading='lazy'
                                                 className="h-[300px] md:h-[350px] w-full object-cover"
                                             />
                                             </div>
@@ -146,6 +153,7 @@ export default function Gallery() {
                                                 alt="spot"
                                                 width={800}
                                                 height={300}
+                                                loading='lazy'
                                                 className="h-[250px] md:h-[350px]  object-cover"
                                               />
                                             </div>
@@ -155,6 +163,7 @@ export default function Gallery() {
                                                 alt="spot"
                                                 width={800}
                                                 height={300}
+                                                loading='lazy'
                                                 className="h-[250px] md:h-[350px] object-cover"
                                               />
                                             </div>
@@ -168,6 +177,7 @@ export default function Gallery() {
                                             alt="spot"
                                             width={800}
                                             height={700}
+                                            loading='lazy'
                                             className="h-[700px] md:h-[675px] object-cover"
                                         />
                                     </div>
@@ -178,6 +188,7 @@ export default function Gallery() {
                                             alt="spot"
                                             width={800}
                                             height={500}
+                                            loading='lazy'
                                             className="h-[250px] md:h-[327px] w-full object-cover"
                                         />
 
@@ -188,6 +199,7 @@ export default function Gallery() {
                                             alt="spot"
                                             width={800}
                                             height={500}
+                                            loading='lazy'
                                             className="h-[250px] md:h-[327px] w-full object-cover"
                                         />
                                     </div>
@@ -202,6 +214,7 @@ export default function Gallery() {
                                                 alt="spot"
                                                 width={1200}
                                                 height={400}
+                                                loading='lazy'
                                                 className="h-[300px] md:h-[350px] w-full object-cover"
                                             />
                                         </div>  
@@ -218,6 +231,7 @@ export default function Gallery() {
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
+                                          loading='lazy'
                                           className="object-cover w-full h-[150px]"
                                         />
 
@@ -228,6 +242,7 @@ export default function Gallery() {
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
+                                          loading='lazy'
                                           className="object-cover w-full h-[150px]"
                                         />
 
@@ -241,6 +256,7 @@ export default function Gallery() {
                                         alt="Tangalle"
                                         width={600}
                                         height={300}
+                                        loading='lazy'
                                         className="object-cover w-full h-[150px]"
                                       />
 
@@ -255,6 +271,7 @@ export default function Gallery() {
                                             alt="Tangalle"
                                             width={400}
                                             height={300}
+                                            loading='lazy'
                                             className="object-cover w-full h-[150px] rounded-lg"
                                           />
 
@@ -265,6 +282,7 @@ export default function Gallery() {
                                             alt="Tangalle"
                                             width={400}
                                             height={300}
+                                            loading='lazy'
                                             className="object-cover w-full h-[150px] rounded-lg"
                                           />
 
@@ -276,6 +294,7 @@ export default function Gallery() {
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
+                                          loading='lazy'
                                           className="object-cover w-full h-[312px]"
                                         />
 
@@ -289,6 +308,7 @@ export default function Gallery() {
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
+                                          loading='lazy'
                                           className="object-cover w-full h-[150px]"
                                         />
 
@@ -299,6 +319,7 @@ export default function Gallery() {
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
+                                          loading='lazy'
                                           className="object-cover w-full h-[150px]"
                                         />
 
@@ -312,6 +333,7 @@ export default function Gallery() {
                                         alt="Tangalle"
                                         width={600}
                                         height={300}
+                                        loading='lazy'
                                         className="object-cover w-full h-[150px]"
                                       />
 
@@ -326,6 +348,7 @@ export default function Gallery() {
                                             alt="Tangalle"
                                             width={400}
                                             height={300}
+                                            loading='lazy'
                                             className="object-cover w-full h-[150px] rounded-lg"
                                           />
 
@@ -336,6 +359,7 @@ export default function Gallery() {
                                             alt="Tangalle"
                                             width={400}
                                             height={300}
+                                            loading='lazy'
                                             className="object-cover w-full h-[150px] rounded-lg"
                                           />
 
@@ -347,6 +371,7 @@ export default function Gallery() {
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
+                                          loading='lazy'
                                           className="object-cover w-full h-[312px]"
                                         />
 

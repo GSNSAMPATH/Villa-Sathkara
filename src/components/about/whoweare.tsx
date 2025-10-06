@@ -90,6 +90,7 @@ export default function WhoWeAre() {
             alt="Villa Sathkara"
             width={600}   // base width for Next.js optimization
             height={500}  // scale height proportionally
+            loading="lazy"
             className="w-[90%] max-w-[150px] md:max-w-[350px] h-auto" // responsive scaling
         />
         </div>
@@ -157,6 +158,7 @@ export default function WhoWeAre() {
         <Image
           src={villaImages[current]}
           alt="Villa"
+          loading="lazy"
           fill
           className="object-cover"
         />
@@ -188,6 +190,7 @@ export default function WhoWeAre() {
         alt={`Villa ${index}`}
         width={800}
         height={700}
+        loading="lazy"
         className="object-cover w-full h-full rounded-2xl"
       />
     </div>

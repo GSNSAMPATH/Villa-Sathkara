@@ -70,6 +70,7 @@ export default function About() {
               alt="Villa Sathkara"
               width={600}
               height={500}
+              loading="lazy"
               className="h-full object-cover rounded-2xl"
             />
           </div>

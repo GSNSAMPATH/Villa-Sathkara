@@ -10,7 +10,8 @@ export default function Welcome() {
             src="https://res.cloudinary.com/diatamf9x/image/upload/v1759466793/Layer_1_rd0euk.png"
             alt="Villa Sathkara"
             width={600}   // base width for Next.js optimization
-            height={500}  // scale height proportionally
+            height={500}  // scale height proportionally\
+            loading="lazy"
             className="w-[90%] max-w-[150px] md:max-w-[350px] h-auto" // responsive scaling
         />
         </div>

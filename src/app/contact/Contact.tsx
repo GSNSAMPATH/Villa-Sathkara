@@ -45,6 +45,7 @@ export default function Contact() {
                         alt="Villa Sathkara"
                         width={600}   // base width for Next.js optimization
                         height={500}  // scale height proportionally
+                        priority
                         className="inset-0 w-full h-full object-cover" // responsive scaling
                     />
 
