@@ -82,6 +82,7 @@ export default function VillaFeatures() {
           alt="Villa"
           width={700}
           height={300}
+          quality={70}
           loading="lazy"
           className="rounded-lg"
         />
