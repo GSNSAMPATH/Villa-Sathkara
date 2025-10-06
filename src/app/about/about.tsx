@@ -41,6 +41,7 @@ export default function About() {
             width={1920}
             height={1080}
             quality={80}
+            priority 
             className="inset-0 h-[40vh] sm:h-[60vh] lg:h-[80vh] object-cover transition-all duration-1000 rounded-2xl"
           />
 
