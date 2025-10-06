@@ -40,7 +40,7 @@ export default function About() {
             alt="Villa Sathkara"
             width={1920}
             height={1080}
-            priority
+            quality={80}
             className="inset-0 h-[40vh] sm:h-[60vh] lg:h-[80vh] object-cover transition-all duration-1000 rounded-2xl"
           />
 
