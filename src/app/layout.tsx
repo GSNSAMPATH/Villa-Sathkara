@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Villa Sathkara Team" }],
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "Villa Sathkara | Luxury Beachfront Villa in Tangalle, Sri Lanka",
