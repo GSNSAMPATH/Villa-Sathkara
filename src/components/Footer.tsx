@@ -92,7 +92,7 @@ const Footer = () => {
       <div className="border-t border-gray-600 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
         <p>Copyright © {new Date().getFullYear()} Villa Sathkara</p>
         <p className="mt-2 md:mt-0">
-          Built with <span className="text-white"><a href="https://digitalescapes.lk/">Digital Escapes</a></span> in Sri Lanka
+          Built with <span className="text-white"><a href="http://www.thedigitalescapes.com">Digital Escapes</a></span> in Sri Lanka
         </p>
       </div>
 
