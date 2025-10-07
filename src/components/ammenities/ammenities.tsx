@@ -47,7 +47,7 @@ export default function VillaFeatures() {
       title: "Free WiFi & Parking",
       describtion: "High-speed internet and ample free parking space.",
       items: ["High-speed internet", "Ample free parking space"],
-      images: ["https://res.cloudinary.com/diatamf9x/image/upload/v1759479347/12434_tw1hby.webp", "https://res.cloudinary.com/diatamf9x/image/upload/v1759480003/DJI_20250831193336_0490_D_jetuc4.webp"],
+      images: ["https://res.cloudinary.com/diatamf9x/image/upload/v1759479347/12434_tw1hby.webp", "https://res.cloudinary.com/diatamf9x/image/upload/v1759480003/DJI_20250831193336_0490_D_jetuc4.webp","https://res.cloudinary.com/diatamf9x/image/upload/v1759479431/_DSC4346-Edit_uck73l.webp"],
     },
     {
       icon: <FaUtensils className="sm:text-3xl text-[#1B3A57] mr-4" />,
@@ -82,8 +82,6 @@ export default function VillaFeatures() {
           alt="Villa"
           width={700}
           height={300}
-          quality={60}
-          // loading="lazy"
           className="rounded-lg"
         />
               {/* Navigation */}
@@ -128,7 +126,6 @@ export default function VillaFeatures() {
                     width={0} // let Next.js auto-scale
                     height={0}
                     sizes="100vw"
-                    loading="lazy"
                     onClick={() => setActiveImage(idx)}
                     className={`w-full h-auto sm:h-[50px] md:h-[100px] xl:h-[120px] cursor-pointer rounded-2xl border ${
                     idx === activeImage ? "border-blue-400" : "border-gray-300"
@@ -230,8 +227,6 @@ export default function VillaFeatures() {
                 alt="Villa"
                 width={600}
                 height={300}
-                quality={60}
-                loading="lazy"
                 className="rounded-2xl object-cover"
               />
 
@@ -277,7 +272,6 @@ export default function VillaFeatures() {
                     width={0} // let Next.js auto-scale
                     height={0}
                     sizes="100vw"
-                    loading="lazy"
                     onClick={() => setActiveImage(idx)}
                     className={`w-full h-auto sm:h-[50px] md:h-[100px] xl:h-[150px] cursor-pointer rounded-2xl border ${
                     idx === activeImage ? "border-blue-400" : "border-gray-300"
