@@ -39,7 +39,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Villa Sathkara Team" }],
   icons: {
-    icon: "/favicon.png",
+    icon: [{ url: "/favicon.ico", type: "image/x-icon" },
+    { url: "/favicon.png", type: "image/png" },
+    ],
     shortcut: "/favicon.png",
     apple: "/favicon.png",
   },
@@ -92,8 +94,8 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Villa Sathkara",
               url: "https://www.villasathkara.com",
-              logo: "https://www.villasathkara.com/favicon.png",
-              image: "https://www.villasathkara.com/favicon.png",
+              logo: "https://www.villasathkara.com/logo.png",
+              image: "https://www.villasathkara.com/logo.png",
               sameAs: [
                 "https://www.facebook.com/villasathkara",
                 "https://www.instagram.com/villasathkara"
