@@ -92,7 +92,8 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Villa Sathkara",
               url: "https://www.villasathkara.com",
-              logo: "https://www.villasathkara.com/logo.png",
+              logo: "https://www.villasathkara.com/favicon.png",
+              image: "https://www.villasathkara.com/favicon.png",
               sameAs: [
                 "https://www.facebook.com/villasathkara",
                 "https://www.instagram.com/villasathkara"
