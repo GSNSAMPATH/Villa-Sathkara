@@ -82,7 +82,7 @@ export default function VillaFeatures() {
           alt="Villa"
           width={700}
           height={300}
-          className="rounded-lg"
+          className="rounded-lg w-full h-full object-cover"
         />
               {/* Navigation */}
               <button
@@ -127,7 +127,7 @@ export default function VillaFeatures() {
                     height={0}
                     sizes="100vw"
                     onClick={() => setActiveImage(idx)}
-                    className={`w-full h-auto sm:h-[50px] md:h-[100px] xl:h-[120px] cursor-pointer rounded-2xl border ${
+                    className={`w-full h-auto sm:h-[50px] md:h-[100px] xl:h-[120px] object-cover cursor-pointer rounded-2xl border ${
                     idx === activeImage ? "border-blue-400" : "border-gray-300"
                     }`}
                 />

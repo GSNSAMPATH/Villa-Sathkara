@@ -14,8 +14,8 @@ export default function About() {
     "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
     "https://res.cloudinary.com/diatamf9x/image/upload/v1759111542/251c7a09f8965b8a18d4ec50f869f0929cc16752_ths8ni.jpg",
     "https://res.cloudinary.com/diatamf9x/image/upload/v1759479431/_DSC4346-Edit_uck73l.webp",
-    // "https://res.cloudinary.com/diatamf9x/image/upload/v1759634870/_DSC3530_jeafzr.webp",
-    // "https://res.cloudinary.com/diatamf9x/image/upload/v1759480117/DJI_20250831090508_0379_D-HDR-2_rqwl0k.jpg",
+    "https://res.cloudinary.com/diatamf9x/image/upload/v1759634870/_DSC3530_jeafzr.webp",
+    "https://res.cloudinary.com/diatamf9x/image/upload/v1759480117/DJI_20250831090508_0379_D-HDR-2_rqwl0k.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,19 +40,19 @@ export default function About() {
             alt="Villa Sathkara"
             width={1920}
             height={1080}
-            quality={80}
+            quality={70}
             priority 
             className="inset-0 h-[40vh] sm:h-[60vh] lg:h-[80vh] object-cover transition-all duration-1000 rounded-2xl"
           />
 
           {/* Line indicators (centered, only mobile) */}
-          <div className="absolute bottom-[0] left-1/2 transform -translate-x-1/2 flex gap-2">
+          <div className="absolute bottom-[0] left-1/2 transform -translate-x-1/2 flex gap-2 max-w-[100px] md:max-w-[400px]">
             {images.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentIndex(i)}
                 aria-label={`Go to slide ${i + 1}`}
-                className={`h-1 w-18 rounded-full transition-all ${
+                className={`h-1 w-6 md:w-10 rounded-full transition-all ${
                   i === currentIndex ? "bg-[#1B3A57]" : "bg-gray-300"
                 }`}
               />

@@ -11,7 +11,10 @@ export default function Hero() {
         loop
         muted
         playsInline
+        preload="none"
+        poster="https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp"
         className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+        
       >
 
         <source src="https://res.cloudinary.com/diatamf9x/video/upload/v1759765908/Video_Project_1_mwjg1n.mp4" type="video/mp4" />
