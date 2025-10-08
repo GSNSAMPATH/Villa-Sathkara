@@ -114,7 +114,7 @@ export default async function BlogPage() {
               )}
 
               <div className=" py-1 md:py-4 px-4 md:p-5 h-[150px] md:h-[220px]">
-                <h4 className="font-semibold text-gray-800 mb-1 md:mb-2 text-[12px] md:text-[16px]  md:text-base">
+                <h4 className="font-semibold text-gray-800 mb-1 md:mb-2 text-[12px] md:text-[16px]  md:text-base mobile-clamp2">
                   {post.title}
                 </h4>
                 <p className="text-gray-600 text-[10px] md:text-[14px] mb-3 leading-relaxed mobile-clamp">
@@ -122,8 +122,8 @@ export default async function BlogPage() {
                 </p>
                 <a
                   href={`/blog/${post.slug.current}`}
-                  className="text-[#1B3A57] font-semibold hover:underline text-[10px] md:text-[16px]"
-                >
+                  className="text-[#1B3A57] font-semibold hover:underline text-[10px] md:text-[16px] "
+                > 
                   Read More →
                 </a>
               </div>
