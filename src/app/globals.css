@@ -46,3 +46,22 @@ body {
 
 }
 
+
+/* Mobile only text clamp */
+.mobile-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4; /* Number of lines to show */
+}
+
+/* Disable clamp on larger screens */
+@media (min-width: 768px) {
+  .mobile-clamp {
+    display: block;
+    -webkit-line-clamp: unset;
+  }
+}
+
+

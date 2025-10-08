@@ -141,7 +141,7 @@ export default function VillaFeatures() {
 
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 p-0 lg:px-20 bg-white w-full text-white">
+    <div className="flex flex-col md:flex-row gap-8 p-0 sm:px-8 md:px-8  lg:px-30 bg-white w-full text-white">
       {/* Left Side - Accordion List */}
       <div className="hidden md:block w-full md:w-1/2 space-y-6 p-4 md:p-0">
       <div className="w-full">

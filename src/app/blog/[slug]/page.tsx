@@ -108,9 +108,9 @@ export default async function BlogPost({
   }
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
-      <section className="max-w-4xl mx-auto px-4 md:px-0 py-16">
-        <h1 className="font-[poppins] text-[32px] md:text-[40px] font-semibold mb-3">
+    <main className="min-h-screen bg-white text-gray-900 px-4 sm:px-6 md:px-8">
+      <section className="sm:px-6 md:px-8 lg:px-30 py-4 pb-14 md:py-16">
+        <h1 className="font-[poppins] text-[24px] md:text-[40px] font-semibold mb-3 ">
           {blog.title}
         </h1>
         <p className="text-gray-500 mb-6">
@@ -128,7 +128,7 @@ export default async function BlogPost({
               alt={blog.title}
               width={1200}
               height={600}
-              className="w-full object-cover"
+              className="w-full h-[45vh] md:h-[60vh] lg:h-[70vh] object-cover"
             />
           </div>
         )}

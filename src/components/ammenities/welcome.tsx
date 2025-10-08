@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Welcome() {
     return (
-    <section className="bg-white text-white mt-5 md:mt-20 py-4 md:py-16 px-1 lg:px-20 text-center">
+    <section className="bg-white text-white mt-5 md:mt-20 py-4 md:py-16 px-1 sm:px-8 md:px-8  lg:px-30  text-center">
       {/* Heading */}
       <div className="mb-12 bg-white">
         <div className="relative w-full flex justify-center mt-10">

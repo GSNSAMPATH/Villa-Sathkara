@@ -46,9 +46,9 @@ export default async function BlogPage() {
   const recentPosts = blogs.slice(1, 7);
 
   return (
-    <main className="bg-white min-h-screen">
+    <main className="bg-white min-h-screen px-4 sm:px-6 md:px-8">
       {/* -------------------- Hero Blog Section -------------------- */}
-      <section className="max-w-7xl mx-auto px-4 md:px-10 py-16 grid md:grid-cols-2 gap-10 items-center">
+      <section className="mx-auto sm:px-6 md:px-8 lg:px-30 py-4 pb-14 md:pb-16 md:py-16 grid md:grid-cols-2 gap-10 items-center">
         <div className="order-2 md:order-1">
           <div className="flex items-center gap-2 text-gray-500 mb-3">
             <FaRegClock />
@@ -91,38 +91,38 @@ export default async function BlogPage() {
       </section>
 
       {/* -------------------- Recent Posts -------------------- */}
-      <section className="max-w-7xl mx-auto px-4 md:px-10 pb-20">
+      <section className="sm:px-6 md:px-8 lg:px-30 pb-20">
         <h3 className="text-2xl md:text-3xl font-bold text-[#1B3A57] mb-10">
           Recent Posts
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-8">
           {recentPosts.map((post) => (
             <div
               key={post._id}
-              className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition"
+              className="bg-white rounded-xl md:rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition"
             >
               {post.mainImage && (
-                <div className="relative w-full h-[220px]">
+                <div className="relative w-full h-[150px] md:h-[220px]">
                   <Image
                     src={urlFor(post.mainImage).url()}
                     alt={post.title}
                     fill
-                    className="object-cover"
+                    className="object-cover h-[20px] md:w-full md:h-full"
                   />
                 </div>
               )}
 
-              <div className="p-5">
-                <h4 className="font-semibold text-gray-800 mb-2 text-sm md:text-base">
+              <div className=" py-1 md:py-4 px-4 md:p-5 h-[150px] md:h-[220px]">
+                <h4 className="font-semibold text-gray-800 mb-1 md:mb-2 text-[12px] md:text-[16px]  md:text-base">
                   {post.title}
                 </h4>
-                <p className="text-gray-600 text-sm mb-3 leading-relaxed">
-                  {post.excerpt}
+                <p className="text-gray-600 text-[10px] md:text-[14px] mb-3 leading-relaxed mobile-clamp">
+                {post.excerpt}
                 </p>
                 <a
                   href={`/blog/${post.slug.current}`}
-                  className="text-[#1B3A57] font-semibold hover:underline"
+                  className="text-[#1B3A57] font-semibold hover:underline text-[10px] md:text-[16px]"
                 >
                   Read More →
                 </a>

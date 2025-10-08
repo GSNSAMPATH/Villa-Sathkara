@@ -58,7 +58,7 @@ export default async function Gallery() {
 
                         </section>
                        
-                                <section className="bg-white text-white mt-5 md:mt-20 py-4 md:py-16 px-1 lg:px-20 text-center">
+                                <section className="bg-white text-white mt-5 md:mt-20 py-4 md:py-16 px-1 sm:px-8 md:px-8  lg:px-30 text-center">
                                   {/* Heading */}
                                   <div className="mb-12 bg-white">
                                     <div className="relative w-full flex justify-center mt-10">
@@ -80,7 +80,7 @@ export default async function Gallery() {
 
                         
 
-                         <section className="py-1 md:px-4 lg:px-20 bg-white w-full flex justify-center md:h-650 mb-10 md:mb-0">
+                         <section className="py-1 md:px-4 lg:px-20 bg-white w-full flex justify-center md:h-650 mb-10 md:mb-0 sm:px-8 md:px-8  lg:px-30">
 
                             {/* Masonry Grid */}
                             <div className="hidden md:grid grid-cols-1">

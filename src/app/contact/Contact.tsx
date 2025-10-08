@@ -56,7 +56,7 @@ export default function Contact() {
                     </div>
                 </section>
 
-                <section className="py-2 sm:px-6 md:px-8 lg:px-20  mt-[100px]">
+                <section className="py-2 sm:px-6 md:px-8 lg:px-30  mt-[100px]">
                     <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden shadow-lg">
                         {/* Left - Villa Info */}
                         <div className="bg-[#1B3A57] text-white p-10 flex flex-col justify-between relative order-2 md:order-1 ">
@@ -224,7 +224,7 @@ export default function Contact() {
                 </div>
             </section>
 
-            <section className=" mt-12 sm:px-8 md:px-8  lg:px-20 py-12 w-full">
+            <section className=" mt-12 sm:px-8 md:px-8  lg:px-30 py-12 w-full">
                 <div className="flex justify-center h-[50vh] md:h-[70vh]  mx-auto">
                     <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29978.94668621035!2d80.7565386933539!3d6.007662538454867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae14b007172b1fd%3A0xcfb1953975296db4!2sVilla%20Sathkara%20Unakuruwa!5e0!3m2!1ssi!2slk!4v1759745726606!5m2!1ssi!2slk"

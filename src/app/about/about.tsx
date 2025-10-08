@@ -64,7 +64,7 @@ export default function About() {
         <HomeByTheSea />
 
         {/* Hospitality Section */}
-        <section className="relative mt-10 w-full h-[30vh] sm:h-[60vh] lg:h-[60vh] overflow-hidden bg-gray-200 px-2 md:px-20 py-7 md:py-20 flex items-center content-center rounded-2xl">
+        <section className="relative mt-10 w-full h-[30vh] sm:h-[60vh] lg:h-[60vh] overflow-hidden bg-gray-200 px-2 md:px-20 lg:px-30 py-7 md:py-20 flex items-center content-center rounded-2xl">
           <div className="h-full w-1/2 md:max-w-2xl">
             <Image
               src="https://res.cloudinary.com/diatamf9x/image/upload/v1759224564/653d73049ffe2faaa2a0aa7346a72cb8998b7d63_m5xupb.jpg"

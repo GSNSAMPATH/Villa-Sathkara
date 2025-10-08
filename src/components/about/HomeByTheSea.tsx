@@ -32,7 +32,7 @@ const features = [
 
 export default function HomeByTheSea() {
   return (
-    <section className="py-16 px-4 lg:px-20  w-full"> 
+    <section className="py-16 px-4 sm:px-8 md:px-8  lg:px-30  w-full"> 
       {/* Heading */}
       <div className="mb-12">
         <h2 className="font-[Poppins] font-semibold md:text-[36px] text-[16px] leading-[100%] tracking-[0%] text-[#1B3A57] text-center sm:text-left">

@@ -34,7 +34,7 @@ export default function ExploreTangalle() {
         const next = () => setIndex((i) => (i + 1) % exploreSpots.length);
 
   return (
-    <section className="relative w-full overflow-hidden py-1 md:py-12 mt-20 rounded-2xl">
+    <section className="relative w-full overflow-hidden py-1 md:py-12 mt-20 rounded-2xl ">
       {/* Background Image */}
       <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl md:rounded-2xl">
         <Image
@@ -60,7 +60,7 @@ export default function ExploreTangalle() {
         </div>
 
         {/* Content overlay */}
-        <div className="absolute inset-0 flex flex-col justify-between p-10 md:p-16 text-white">
+        <div className="absolute inset-0 flex flex-col justify-between p-10 md:p-16 lg:p-20 lg:px-30 text-white">
           {/* Top text */}
           <div className="hidden md:flex flex-col max-w-xl">
             <h2 className="font-[Poppins] md:text-[24px] text-[12px]  mb-4">Explore Thangalle</h2>
@@ -82,13 +82,13 @@ export default function ExploreTangalle() {
             <FaMapMarkerAlt className="text-white text-[12px] md:text-xl md:mt-1 mt-[3] mr-1" />
             <div>
               <h4 className="font-[Poppins] md:text-[20px] text-[12px] font-semibold">{exploreSpots[0].title}</h4>
-              <p className="font-[Poppins] sm:w-1/2 lg:w-4/8 xl:w-5/6 2xl:w-full md:text-[16px] text-[8px] text-white/80 mt-1">{exploreSpots[0].desc}</p>
+              <p className="font-[Poppins] sm:w-1/2 lg:w-4/8 xl:w-5/6  md:text-[16px] text-[8px] text-white/80 mt-1">{exploreSpots[0].desc}</p>
             </div>
           </div>
         </div>
 
         {/* Right stacked cards */}
-        <div   className="absolute flex flex-row items-end md:flex-col space-x-3 md:space-x-0 md:space-y-2 bottom-4 sm:bottom-6 md:top-1/2 md:right-10 left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0  md:-translate-y-1/2 sm:h-[100%] md:py-14">
+        <div   className="absolute flex flex-row items-end md:flex-col space-x-3 md:space-x-0 md:space-y-2 bottom-4 sm:bottom-6 md:top-1/2 md:right-10 left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0  md:-translate-y-1/2 sm:h-[100%] md:py-14 lg:px-20">
           {exploreSpots.slice(1).map((spot, i) => ( 
             <><div
                   key={i}
@@ -102,7 +102,7 @@ export default function ExploreTangalle() {
                       className="object-cover " />
 
               </div>
-              <div className="hidden md:flex relative bottom-3 left-2 flex items-center gap-2 text-white text-sm font-medium  px-3 py-1 rounded-full ">
+              <div className="hidden md:flex relative bottom-3 left-2  flex items-center gap-2 text-white text-sm font-medium  px-3 py-1 rounded-full ">
                 <FaMapMarkerAlt /> {spot.title}
             </div></>
           ))}
