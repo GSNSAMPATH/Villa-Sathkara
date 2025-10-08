@@ -128,6 +128,7 @@ export default async function BlogPost({
               alt={blog.title}
               width={1200}
               height={600}
+              quality={75}
               className="w-full h-[45vh] md:h-[60vh] lg:h-[70vh] object-cover"
             />
           </div>
