@@ -1,5 +1,15 @@
 import Image from 'next/image'
 import type { Metadata } from "next";
+import { client, urlFor } from '@/lib/sanityClient'
+
+async function getGalleryImages() {
+  const query = `*[_type == "galleryImage"] | order(order asc) {
+    title,
+    image
+  }`
+  return await client.fetch(query)
+}
+
 
 export const metadata: Metadata = {
   title: "Gallery | Villa Sathkara Tangalle",
@@ -23,22 +33,12 @@ export const metadata: Metadata = {
 };
 
 
-const galleryImages = [
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759479387/pool_xa6qcu.webp", className: "md:col-span-2 md:row-span-2 h-[400px] md:h-[500px]" },
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759480082/DJI_20250831212747_0527_D_q6o0qm.jpg", className: "h-[250px] w-[250px]" },
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759480059/_DSC3981_sypypm.jpg", className: "h-[250px]" },
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759479431/_DSC4346-Edit_uck73l.webp", className: "h-[250px]" },
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759476677/_DSC3770_a0wkm3.webp", className: "h-[250px]" },
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759482017/_DSC3901_ll2i3l.webp", className: "md:col-span-2 h-[400px]" },
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759479995/DJI_20250831193153_0478_D_qrhmug.webp", className: "h-[250px]" },
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759480003/DJI_20250831193336_0490_D_jetuc4.webp", className: "h-[250px]" },
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759479993/DJI_20250831091332_0449_D_cg3g97.webp", className: "h-[250px]" },
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759480023/DJI_20250831212427_0505_D_qhqhma.jpg", className: "md:col-span-2 h-[400px]" },
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759481594/DJI_20250831090508_0379_D-HDR-2_mrlvjh.webp", className: "" },
-  { img: "https://res.cloudinary.com/diatamf9x/image/upload/v1759480106/_DSC3516_th1grg.jpg", className: "" },
-];
 
-export default function Gallery() {
+
+export default async function Gallery() {
+
+    const galleryImages = await getGalleryImages()
+
     return (
         <section className="flex justify-center px-4 sm:px-6 md:px-8 min-h-screen w-full">
                     <div className="bg-white w-full flex flex-col  items-center">
@@ -89,7 +89,7 @@ export default function Gallery() {
                                     {/* Row 1 */}
                                     <div className="md:col-span-2 relative rounded-2xl overflow-hidden bg-white h-[250px] md:h-[300px] group">
                                         <Image
-                                            src={galleryImages[0].img ?? ""}
+                                            src={urlFor(galleryImages[0].image).url() ?? ""}
                                             alt="spot"
                                             width={800}
                                             height={500}
@@ -101,7 +101,7 @@ export default function Gallery() {
                                 
                                     <div className=" rounded-2xl overflow-hidden">
                                         <Image
-                                            src={galleryImages[1].img ?? ""}
+                                            src={urlFor(galleryImages[1].image).url() ?? ""}
                                             alt="spot"
                                             width={400}
                                             height={700}
@@ -113,7 +113,7 @@ export default function Gallery() {
                                     {/* Row 2 */}
                                      <div className="rounded-2xl bottom-93 relative overflow-hidden bg-white ">
                                               <Image
-                                                src={galleryImages[2].img}
+                                                src={urlFor(galleryImages[2].image).url() ?? ""}
                                                 alt="spot"
                                                 width={400}
                                                 height={300}
@@ -123,7 +123,7 @@ export default function Gallery() {
                                             </div>
                                             <div className="rounded-2xl bottom-93 relative overflow-hidden">
                                               <Image
-                                                src={galleryImages[3].img}
+                                                src={urlFor(galleryImages[3].image).url() ?? ""}
                                                 alt="spot"
                                                 width={400}
                                                 height={300}
@@ -136,7 +136,7 @@ export default function Gallery() {
                                         {/* Row 3 */}
                                             <div className="md:col-span-3 relative bottom-93 rounded-2xl overflow-hidden">
                                             <Image
-                                                src={galleryImages[4].img}
+                                                src={urlFor(galleryImages[4].image).url() ?? ""}
                                                 alt="spot"
                                                 width={1200}
                                                 height={400}
@@ -149,7 +149,7 @@ export default function Gallery() {
                                         <div className="relative flex justify-center w-full col-span-3  gap-5 w-full bg-gray-100 ">
                                             <div className="rounded-2xl bottom-93 relative overflow-hidden bg-white ">
                                               <Image
-                                                src={galleryImages[5].img}
+                                                src={urlFor(galleryImages[5].image).url() ?? ""}
                                                 alt="spot"
                                                 width={800}
                                                 height={300}
@@ -159,7 +159,7 @@ export default function Gallery() {
                                             </div>
                                             <div className="rounded-2xl bottom-93 relative overflow-hidden">
                                               <Image
-                                                src={galleryImages[6].img}
+                                                src={urlFor(galleryImages[6].image).url() ?? ""}
                                                 alt="spot"
                                                 width={800}
                                                 height={300}
@@ -173,7 +173,7 @@ export default function Gallery() {
                                     <div className="relative bottom-93 rounded-2xl flex flex-row justify-center w-full col-span-3  gap-5 overflow-hidden">
                                     <div className=" rounded-2xl overflow-hidden  bg-white h-[700px] md:h-[675px] group">
                                         <Image
-                                            src={galleryImages[7].img ?? ""}
+                                            src={urlFor(galleryImages[7].image).url() ?? ""}
                                             alt="spot"
                                             width={800}
                                             height={700}
@@ -184,7 +184,7 @@ export default function Gallery() {
 
                                     <div className="relative flex flex-col rounded-2xl overflow-hidden gap-5 group w-full">
                                         <Image
-                                            src={galleryImages[8].img ?? ""}
+                                            src={urlFor(galleryImages[8].image).url() ?? ""}
                                             alt="spot"
                                             width={800}
                                             height={500}
@@ -195,7 +195,7 @@ export default function Gallery() {
                                 
 
                                         <Image
-                                            src={galleryImages[11].img ?? ""}
+                                            src={urlFor(galleryImages[9].image).url() ?? ""}
                                             alt="spot"
                                             width={800}
                                             height={500}
@@ -210,7 +210,7 @@ export default function Gallery() {
 
                                                                               <div className="md:col-span-3 relative bottom-93 rounded-2xl overflow-hidden">
                                             <Image
-                                                src={galleryImages[10].img}
+                                                src={urlFor(galleryImages[10].image).url() ?? ""}
                                                 alt="spot"
                                                 width={1200}
                                                 height={400}
@@ -227,7 +227,7 @@ export default function Gallery() {
                                     <div className="grid grid-cols-2 gap-3">
                                       <div className="relative rounded-lg overflow-hidden">
                                         <Image
-                                          src= {galleryImages[0].img}
+                                          src={urlFor(galleryImages[0].image).url() ?? ""}
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
@@ -238,7 +238,7 @@ export default function Gallery() {
                                       </div>
                                       <div className="relative rounded-lg overflow-hidden">
                                         <Image
-                                          src= {galleryImages[1].img}
+                                          src= {urlFor(galleryImages[1].image).url() ?? ""}
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
@@ -252,7 +252,7 @@ export default function Gallery() {
                                     {/* Row 2 (wide image) */}
                                     <div className="relative rounded-lg overflow-hidden">
                                       <Image
-                                        src={galleryImages[2].img}
+                                        src={urlFor(galleryImages[2].image).url() ?? ""}
                                         alt="Tangalle"
                                         width={600}
                                         height={300}
@@ -267,7 +267,7 @@ export default function Gallery() {
                                       <div className="relative rounded-lg overflow-hidden gap-3 flex flex-col">
                                         <div className="relative rounded-lg overflow-hidden">
                                           <Image
-                                            src={galleryImages[3].img}
+                                            src={urlFor(galleryImages[3].image).url() ?? ""}
                                             alt="Tangalle"
                                             width={400}
                                             height={300}
@@ -278,7 +278,7 @@ export default function Gallery() {
                                         </div>
                                         <div className="relative rounded-lg overflow-hidden">
                                           <Image
-                                            src={galleryImages[4].img}
+                                            src={urlFor(galleryImages[4].image).url() ?? ""}
                                             alt="Tangalle"
                                             width={400}
                                             height={300}
@@ -290,7 +290,7 @@ export default function Gallery() {
                                       </div>
                                       <div className="relative rounded-lg overflow-hidden">
                                         <Image
-                                          src={galleryImages[5].img}
+                                          src={urlFor(galleryImages[5].image).url() ?? ""}
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
@@ -304,7 +304,7 @@ export default function Gallery() {
                                      <div className="grid grid-cols-2 gap-3">
                                       <div className="relative rounded-lg overflow-hidden">
                                         <Image
-                                          src= {galleryImages[6].img}
+                                          src= {urlFor(galleryImages[6].image).url() ?? ""}
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
@@ -315,7 +315,7 @@ export default function Gallery() {
                                       </div>
                                       <div className="relative rounded-lg overflow-hidden">
                                         <Image
-                                          src= {galleryImages[7].img}
+                                          src= {urlFor(galleryImages[7].image).url() ?? ""}
                                           alt="Tangalle"
                                           width={400}
                                           height={300}
@@ -329,7 +329,7 @@ export default function Gallery() {
                                     {/* Row 2 (wide image) */}
                                     <div className="relative rounded-lg overflow-hidden">
                                       <Image
-                                        src={galleryImages[8].img}
+                                        src={urlFor(galleryImages[8].image).url() ?? ""}
                                         alt="Tangalle"
                                         width={600}
                                         height={300}
@@ -344,7 +344,7 @@ export default function Gallery() {
                                       <div className="relative rounded-lg overflow-hidden gap-3 flex flex-col">
                                         <div className="relative rounded-lg overflow-hidden">
                                           <Image
-                                            src={galleryImages[9].img}
+                                            src={urlFor(galleryImages[9].image).url() ?? ""}
                                             alt="Tangalle"
                                             width={400}
                                             height={300}
@@ -355,7 +355,7 @@ export default function Gallery() {
                                         </div>
                                         <div className="relative rounded-lg overflow-hidden">
                                           <Image
-                                            src={galleryImages[10].img}
+                                            src={urlFor(galleryImages[10].image).url() ?? ""}
                                             alt="Tangalle"
                                             width={400}
                                             height={300}
@@ -367,7 +367,7 @@ export default function Gallery() {
                                       </div>
                                       <div className="relative rounded-lg overflow-hidden">
                                         <Image
-                                          src={galleryImages[11].img}
+                                          src={urlFor(galleryImages[11].image).url() ?? ""}
                                           alt="Tangalle"
                                           width={400}
                                           height={300}

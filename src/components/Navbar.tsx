@@ -15,6 +15,7 @@ export default function Navbar() {
     { href: "/amenities", label: "Amenities" },
     { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact Us" },
+    { href: "/blog", label: "Blogs" },
   ];
 
   return (
