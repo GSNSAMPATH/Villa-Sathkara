@@ -1,12 +1,8 @@
-"use client";
-
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import { FaRegClock } from "react-icons/fa";
-import imageUrlBuilder from "@sanity/image-url";
 import { client } from "@/lib/sanityClient";
+import imageUrlBuilder from "@sanity/image-url";
+import { FaRegClock } from "react-icons/fa";
+import { notFound } from "next/navigation";
 
 // -------------------- Sanity Image Builder --------------------
 const builder = imageUrlBuilder(client);
@@ -14,40 +10,35 @@ function urlFor(source: any) {
   return builder.image(source);
 }
 
+// -------------------- Blog Interface --------------------
 interface Blog {
   slug: { current: string };
   _id: string;
   title: string;
   excerpt: string;
   date: string;
-  mainImage: any;
+  mainImage?: any;
 }
 
-// -------------------- Main Page --------------------
-export default function BlogPage() {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
-  const router = useRouter();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await client.fetch(
-        `*[_type == "blog"] | order(date desc){
-          _id,
-          title,
-          excerpt,
-          date,
-          slug,
-          mainImage
-        }`
-      );
-      setBlogs(data);
-    };
-    fetchData();
-  }, []);
+// -------------------- Server Component --------------------
+export default async function BlogPage() {
+  // Fetch all blogs (latest first)
+  const blogs: Blog[] = await client.fetch(`
+    *[_type == "blog" && defined(slug.current)] | order(date desc){
+      _id,
+      title,
+      excerpt,
+      date,
+      slug,
+      mainImage
+    }
+  `);
 
   if (!blogs.length) {
     return (
-      <div className="text-center py-20 text-gray-500">Loading blogs...</div>
+      <div className="text-center py-20 text-gray-500">
+        No blogs found.
+      </div>
     );
   }
 
@@ -56,8 +47,6 @@ export default function BlogPage() {
 
   return (
     <main className="bg-white min-h-screen">
-      {/* -------------------- Navigation -------------------- */}
-
       {/* -------------------- Hero Blog Section -------------------- */}
       <section className="max-w-7xl mx-auto px-4 md:px-10 py-16 grid md:grid-cols-2 gap-10 items-center">
         <div className="order-2 md:order-1">
@@ -72,30 +61,33 @@ export default function BlogPage() {
             </span>
           </div>
 
-          <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[20px]  text-[#1B3A57] mb-4">
+          <h2 className="font-[Poppins] font-semibold text-[16px] md:text-[20px] text-[#1B3A57] mb-4">
             {hero.title}
           </h2>
 
-          <p className="font-[Poppins] font-normal text-[14px] md:text-[18px] text-gray-600 leading-relaxed mb-8">{hero.excerpt}</p>
+          <p className="font-[Poppins] font-normal text-[14px] md:text-[18px] text-gray-600 leading-relaxed mb-8">
+            {hero.excerpt}
+          </p>
 
-          <button
-            type="button"
-            onClick={() => router.push(`/blog/${hero.slug.current}`)}
+          <a
+            href={`/blog/${hero.slug.current}`}
             className="border border-[#1B3A57] text-[#1B3A57] text-sm md:text-base w-full md:w-auto rounded-full px-6 py-2 font-medium hover:bg-[#1B3A57] hover:text-white transition"
           >
             Read More
-          </button>
+          </a>
         </div>
 
-        <div className="rounded-2xl overflow-hidden shadow-md oder-1 md:order-2">
-          <Image
-            src={urlFor(hero.mainImage).url()}
-            alt={hero.title}
-            width={800}
-            height={500}
-            className="object-cover md:w-full md:h-[400px]"
-          />
-        </div>
+        {hero.mainImage && (
+          <div className="rounded-2xl overflow-hidden shadow-md order-1 md:order-2">
+            <Image
+              src={urlFor(hero.mainImage).url()}
+              alt={hero.title}
+              width={800}
+              height={500}
+              className="object-cover md:w-full md:h-[400px]"
+            />
+          </div>
+        )}
       </section>
 
       {/* -------------------- Recent Posts -------------------- */}
@@ -110,14 +102,17 @@ export default function BlogPage() {
               key={post._id}
               className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition"
             >
-              <div className="relative w-full h-[220px]">
-                <Image
-                  src={urlFor(post.mainImage).url()}
-                  alt={post.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              {post.mainImage && (
+                <div className="relative w-full h-[220px]">
+                  <Image
+                    src={urlFor(post.mainImage).url()}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
+
               <div className="p-5">
                 <h4 className="font-semibold text-gray-800 mb-2 text-sm md:text-base">
                   {post.title}
@@ -125,12 +120,12 @@ export default function BlogPage() {
                 <p className="text-gray-600 text-sm mb-3 leading-relaxed">
                   {post.excerpt}
                 </p>
-                <button
-                  onClick={() => router.push(`/blog/${post.slug.current}`)}
+                <a
+                  href={`/blog/${post.slug.current}`}
                   className="text-[#1B3A57] font-semibold hover:underline"
                 >
                   Read More →
-                </button>
+                </a>
               </div>
             </div>
           ))}
