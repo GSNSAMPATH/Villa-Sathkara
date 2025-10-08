@@ -1,8 +1,11 @@
+"use client"
+
 import Image from "next/image";
 import { client } from "@/lib/sanityClient";
 import imageUrlBuilder from "@sanity/image-url";
 import { FaRegClock } from "react-icons/fa";
-import { notFound } from "next/navigation";
+import { useRouter } from "next/navigation";
+
 
 // -------------------- Sanity Image Builder --------------------
 const builder = imageUrlBuilder(client);
@@ -22,6 +25,7 @@ interface Blog {
 
 // -------------------- Server Component --------------------
 export default async function BlogPage() {
+    const router = useRouter();
   // Fetch all blogs (latest first)
   const blogs: Blog[] = await client.fetch(`
     *[_type == "blog" && defined(slug.current)] | order(date desc){
@@ -49,7 +53,7 @@ export default async function BlogPage() {
     <main className="bg-white min-h-screen px-4 sm:px-6 md:px-8">
       {/* -------------------- Hero Blog Section -------------------- */}
       <section className="mx-auto sm:px-6 md:px-8 lg:px-30 py-4 pb-14 md:pb-16 md:py-16 grid md:grid-cols-2 gap-10 items-center">
-        <div className="order-2 md:order-1">
+        <div className="order-2 md:order-1 ">
           <div className="flex items-center gap-2 text-gray-500 mb-3">
             <FaRegClock />
             <span className="text-sm">
@@ -69,12 +73,12 @@ export default async function BlogPage() {
             {hero.excerpt}
           </p>
 
-          <a
-            href={`/blog/${hero.slug.current}`}
-            className="border border-[#1B3A57] text-[#1B3A57] text-sm md:text-base w-full md:w-auto rounded-full px-6 py-2 font-medium hover:bg-[#1B3A57] hover:text-white transition"
+          <button
+            onClick={() => router.push(`/blog/${hero.slug.current}`)}
+            className="border border-[#1B3A57] w-full md:w-auto text-[#1B3A57] text-sm md:text-base rounded-full px-6 py-2 font-medium hover:bg-[#1B3A57] hover:text-white transition"
           >
             Read More
-          </a>
+          </button>
         </div>
 
         {hero.mainImage && (
