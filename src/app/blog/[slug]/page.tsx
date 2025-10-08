@@ -25,7 +25,8 @@ const portableTextComponents: PortableTextComponents = {
           alt={value.alt || "Blog Image"}
           width={800}
           height={500}
-          className="rounded-xl shadow-md"
+          quality={75}
+          className="rounded-xl shadow-md object-cover"
         />
       </div>
     ),
