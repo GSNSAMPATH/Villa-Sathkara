@@ -64,16 +64,50 @@ body {
   -webkit-line-clamp: 2; /* Number of lines to show */
 }
 
-/* Disable clamp on larger screens */
-@media (min-width: 768px) {
+
+
+
+
+/* Tablet: 3 lines */
+@media (min-width: 640px) { /* sm breakpoint */
   .mobile-clamp {
-    display: block;
-    -webkit-line-clamp: unset;
+    -webkit-line-clamp: 3;
   }
-    .mobile-clamp2 {
+  .mobile-clamp2 {
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* Desktop: 4 lines */
+@media (min-width: 780px) { /* md breakpoint */
+  .mobile-clamp {
+    -webkit-line-clamp: 3;
+  }
+  .mobile-clamp2 {
+    -webkit-line-clamp: 3;
+  }
+}
+
+/* Laptop: 5 lines */
+@media (min-width: 1024px) { /* lg breakpoint */
+  .mobile-clamp {
+    -webkit-line-clamp: 4;
+  }
+  .mobile-clamp2 {
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* Desktop: 6 lines */
+@media (min-width: 1024px) { /* lg breakpoint */
+  .mobile-clamp {
+    -webkit-line-clamp: 4;
+  }
+  .mobile-clamp2 {  
     display: block;
     -webkit-line-clamp: unset;
   }
 }
+
 
 
