@@ -60,11 +60,11 @@ export default function ExploreTangalle() {
         </div>
 
         {/* Content overlay */}
-        <div className="absolute inset-0 flex flex-col justify-between p-10 md:p-16 lg:p-20 lg:px-30 text-white">
+        <div className="absolute inset-0 flex flex-col justify-between p-10 md:p-16 lg:p-18  lg:px-30 text-white">
           {/* Top text */}
           <div className="hidden md:flex flex-col max-w-xl">
             <h2 className="font-[Poppins] md:text-[24px] text-[12px]  mb-4">Explore Thangalle</h2>
-            <p className="font-[Poppins] sm:w-4/6 lg:w-full sm:text-[16px] md:text-[20px] text-[10px] text-white/90 mb-6">
+            <p className="font-[Poppins] sm:w-4/6  lg:w-8/9 xl:w-full sm:text-[16px] md:text-[20px] text-[10px] text-white/90 mb-6">
               Tangalle is more than just a beach town — it’s a blend of golden
               shores, hidden tropical bays, fresh seafood, and authentic Sri
               Lankan culture. From surfing and whale watching to temple visits
