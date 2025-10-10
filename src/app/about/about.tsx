@@ -6,10 +6,36 @@ import WhoWeAre from "@/components/about/whoweare";
 import Cuntact from "@/components/cuntact";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import imageUrlBuilder from "@sanity/image-url";
+import { client } from "@/lib/sanityClient";
 
+// -------------------- Sanity Image Builder --------------------
+const builder = imageUrlBuilder(client);
+function urlFor(source: any) {
+  return builder.image(source);
+}
 
 export default function About() {
-  // Example images
+  // -------------------- State --------------------
+  const [managerImage, setManagerImage] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  // -------------------- Fetch Manager Image --------------------
+  useEffect(() => {
+    const fetchImage = async () => {
+      try {
+        const data = await client.fetch(`*[_type == "managerImage"][0]{image, alt}`);
+        setManagerImage(data);
+      } catch (error) {
+        console.error("Error fetching manager image:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchImage();
+  }, []);
+
+  // -------------------- Hero Images --------------------
   const images = [
     "https://res.cloudinary.com/diatamf9x/image/upload/v1758968767/_DSC4351_kiqlkx.webp",
     "https://res.cloudinary.com/diatamf9x/image/upload/v1759111542/251c7a09f8965b8a18d4ec50f869f0929cc16752_ths8ni.jpg",
@@ -20,7 +46,7 @@ export default function About() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto change every 4 seconds
+  // -------------------- Auto-change Hero Image --------------------
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -29,11 +55,20 @@ export default function About() {
     return () => clearInterval(interval);
   }, [images.length]);
 
+  // -------------------- Render --------------------
+  if (loading) {
+    return (
+      <section className="flex justify-center items-center h-screen">
+        <p className="text-gray-500">Loading content...</p>
+      </section>
+    );
+  }
+
   return (
     <section className="flex justify-center px-4 sm:px-6 md:px-8 min-h-screen w-full">
       <div className="bg-white w-full flex flex-col items-center">
-        
-        {/* Auto-changing Hero Image */}
+
+        {/* -------------------- Auto-changing Hero Section -------------------- */}
         <section className="relative w-full h-[45vh] sm:h-[65vh] lg:h-[85vh] rounded-2xl overflow-hidden">
           <Image
             src={images[currentIndex]}
@@ -41,11 +76,11 @@ export default function About() {
             width={1920}
             height={1080}
             quality={70}
-            priority 
+            priority
             className="inset-0 h-[40vh] sm:h-[60vh] lg:h-[80vh] object-cover transition-all duration-1000 rounded-2xl"
           />
 
-          {/* Line indicators (centered, only mobile) */}
+          {/* Line indicators */}
           <div className="absolute bottom-[0] left-1/2 transform -translate-x-1/2 flex gap-2 max-w-[100px] md:max-w-[400px]">
             {images.map((_, i) => (
               <button
@@ -60,26 +95,36 @@ export default function About() {
           </div>
         </section>
 
+        {/* -------------------- Other Sections -------------------- */}
         <WhoWeAre />
         <HomeByTheSea />
 
-        {/* Hospitality Section */}
+        {/* -------------------- Hospitality Section -------------------- */}
         <section className="relative mt-10 w-full h-[30vh] sm:h-[60vh] lg:h-[60vh] overflow-hidden bg-gray-200 px-2 md:px-20 lg:px-30 py-7 md:py-20 flex items-center content-center rounded-2xl">
-          <div className="h-full w-1/2 md:max-w-2xl">
-            <Image
-              src="https://res.cloudinary.com/diatamf9x/image/upload/v1759224564/653d73049ffe2faaa2a0aa7346a72cb8998b7d63_m5xupb.jpg"
-              alt="Villa Sathkara"
-              width={600}
-              height={500}
-              loading="lazy"
-              className="h-full object-cover rounded-2xl"
-            />
-          </div>
+          {/* Manager Image */}
+          {managerImage?.image ? (
+            <div className="h-full w-1/2 md:max-w-2xl">
+              <Image
+                src={urlFor(managerImage.image).width(600).height(500).url()}
+                alt={managerImage.alt || "Villa Sathkara"}
+                width={600}
+                height={500}
+                loading="lazy"
+                className="h-full object-cover rounded-2xl"
+              />
+            </div>
+          ) : (
+            <div className="h-full w-1/2 md:max-w-2xl flex items-center justify-center bg-gray-100 rounded-2xl">
+              <p className="text-gray-500">Manager image not found.</p>
+            </div>
+          )}
+
+          {/* Text Content */}
           <div className="relative w-full h-full px-auto justify-center flex-col flex">
             <h1 className="ml-2 text-center md:text-left md:ml-10 font-[Poppins] md:text-[36px] text-[18px]">
               Hospitality with a Local Touch
             </h1>
-            <p className="ml-2 text-center md:text-left md:ml-10 font-[Poppins] text-[10px] md:text-[20px] font-normal ">
+            <p className="ml-2 text-center md:text-left md:ml-10 font-[Poppins] text-[10px] md:text-[20px] font-normal">
               Our friendly, English-speaking manager Dulash is always available
               to assist you. Whether it’s organizing an airport transfer,
               arranging a safari, or recommending the best local restaurants,
