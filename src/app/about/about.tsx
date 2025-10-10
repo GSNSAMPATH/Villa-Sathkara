@@ -56,13 +56,13 @@ export default function About() {
   }, [images.length]);
 
   // -------------------- Render --------------------
-  if (loading) {
-    return (
-      <section className="flex justify-center items-center h-screen">
-        <p className="text-gray-500">Loading content...</p>
-      </section>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <section className="flex justify-center items-center h-screen">
+  //       <p className="text-gray-500">Loading content...</p>
+  //     </section>
+  //   );
+  // }
 
   return (
     <section className="flex justify-center px-4 sm:px-6 md:px-8 min-h-screen w-full">
